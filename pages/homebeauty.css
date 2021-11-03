@@ -3,7 +3,7 @@ body {
   }
 
   #headContainer {
-    background-image: url("./assets/src/img/shade.jpeg");
+    background-image: url("../src/img/shade.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 35%;
