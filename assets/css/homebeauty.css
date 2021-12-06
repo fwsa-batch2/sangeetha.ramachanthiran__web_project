@@ -1,9 +1,8 @@
 body {
     font-family: sans-serif;
   }
-
   #headContainer {
-    background-image: url("../src/img/shade.jpeg");
+    background-image: url("../img/shade.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 35%;
@@ -13,7 +12,7 @@ body {
 
   #bodycontainer {
 
-    background-color: snow;
+    background-color:white; 
   }
 
   .topicHead {
@@ -28,6 +27,7 @@ body {
 
   .topic {
     font-size: 50px;
+    padding: 20px;
   }
 
   .class1 {
