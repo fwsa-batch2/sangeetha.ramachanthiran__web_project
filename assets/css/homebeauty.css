@@ -7,12 +7,15 @@ body {
     background-attachment: fixed;
     background-size: 100% 35%;
     border-style: groove;
+    
   }
 
 
-  #bodycontainer {
 
-    background-color:white; 
+  #bodycontainer {
+    
+    background-color:  white; 
+    
   }
 
   .topicHead {
