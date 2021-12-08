@@ -1,2 +1,0 @@
-# Smiley world arts
-####

@@ -2,15 +2,12 @@
 <html>
 
 <head>
-  <a href="file:///home/sangeetharamachanthiran/smileyworldartapp-ui/index.html"> 
-  
-    <img src="../assets/img/home.png" width="50" height="50">
- 
-  </a>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
 </head>
 <center>
   <br> <b>
-    <h1>Log In</h1>
+    <h1>Login</h1>
   </b>
 </center>
 <style>
@@ -26,48 +23,39 @@
 <body>
 
 
-  <form action="../index.html">
-    <table align="center" border="5" width="450" height="350" bgcolor="white">
-      <tr>
-        <th>
-          <h3>Name:</h3>
-        </th>
-        <td>
-          <input type="text" name="name" required>
-        </td><br>
-      </tr>
-      <tr>
-        <th>
-          <h3>Email id:</h3>
-        </th>
-        <td>
-          <input type="text" name="email id"required>
-        </td><br>
-      </tr>
-      <tr>
-        <th>
-          <h3>Password:</h3>
-        </th>
-        <td>
-          <input type="password" name="password" required>
-        </td><br>
-      </tr>
-    </table> <br>
+  <form id="myForm" onsubmit="submitHandler()">
+    <div id="table">
+     
+    <span id="email">
+      <label for="">Email id</label>
+    <input id="emailId" type="email" placeholder="Enter email id" required><br><br>
+    <span id="emailErr"></span>
+    </span>
+    <span id="userPassword">
+      <label for="">Password</label>
+    <input id="password" type="password" placeholder="Enter password" required><br><br>
+    </span>
+  
+    </div>
+    
+
+    <br><br><br>
     <center>
       <b>
         Need an account?
-        <a href="file:///home/sangeetharamachanthiran/smileyworldartapp-ui/pages/Signup.html">
-          Signup
+        <a href="file:///home/sangeetharamachanthiran/smileyworldartapp-ui/pages/signIn.html">
+          Sign In
         </a>
       </b>
-    </center>
-    <br><br><br>
-    <center>
+      <br><br><br>
 
-      <input type="Submit" name="Submit" value="Submit" style="font-size:30px;">
-
+      <input id="button" type="Submit" name="Submit"  style="font-size:25px;">
+      
+      <br><br><br><br><br><br>
     </center>
   </form>
+      
+    
 </body>
 
 </html>
