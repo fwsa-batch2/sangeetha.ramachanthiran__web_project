@@ -2,7 +2,7 @@
 
 <head>
   <title>SignIn</title>
-  <link rel="stylesheet" type="text/css" href="../assets/css/signIn.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/signup.css">
   
 </head>
 
@@ -10,7 +10,7 @@
 
   <h1 align="center">
     <span style="font-style: normal; font-size: 70px; color:black;">
-      SignIn
+      Sign Up
     </span>
   </h1>
   <form id="myForm" onsubmit="submitHandler()">
@@ -26,11 +26,11 @@
     </span>
     <span id="userPassword">
       <label for="">Password</label>
-    <input id="password" type="password" placeholder="Enter password" required><br><br>
+    <input id="password" type="password" placeholder="Enter password" minlength="8" maxlength="8" required><br><br>
     </span>
    <span id="confirmPassword">
     <label for="">Confirm password</label>
-    <input id="confirm" type="password" value="" placeholder="Confirm password" required>
+    <input id="confirm" type="password" value="" placeholder="Confirm password" minlength="8" maxlength="8" required>
     <br>
     <span id="errorMsg"></span>
   </span>
@@ -44,7 +44,7 @@
       <br><br><br><br><br><br>
     </center>
   </form>
-  <script src="../assets/js/signIn.js"></script>
+  <script src="../assets/js/signup.js"></script>
 </body>
 
 </html>
