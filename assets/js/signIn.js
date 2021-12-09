@@ -7,27 +7,38 @@ function submitHandler() {
     document.getElementById("errorMsg").innerHTML = "This is invalid";
     return;
   }
- 
   saveData();
-  window.location.href = "file:///home/sangeetharamachanthiran/smileyworldartapp-ui/index%20.html";
+  error();
+ 
+ 
+}
+function error(){
+  let email_id = document.getElementById("emailId").value;
+  const register_email = JSON.parse(localStorage.getItem("Detail"))
+
+  let isExist = false;
+
+
+  for (i=0; i<register_email.length; i++){
+    const user = register_email[i];
+    const email = user.email;
+  if(email_id == register_email){
+   isExist =true;
+   break;
+    
+  }
+  else{
+    isExist = false;
+  }
+  return isExist;
+  }
   
+  saveData();
+}
 
 
 
 let details = [];
-
-
-function error(){
-  let email_id = document.getElementById("emailId").value;
-
-  if(details = email_id){
-    document.getElementById("emailErr").innerHTML = "This email is already register";
-    return;
-    
-  }
-}
-
-
 function saveData(){
  
 
@@ -57,6 +68,7 @@ function getData(){
   if(detailsInArray){
     details = detailsInArray;
   }
+ 
 }
 getData();
 
