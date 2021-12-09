@@ -8,7 +8,7 @@ function submitHandler() {
     return;
   }
   saveData();
-  error();
+  
  
  
 }
@@ -18,8 +18,7 @@ function error(){
 
   let isExist = false;
 
-
-  for (i=0; i<register_email.length; i++){
+for (i=0; i<register_email.length; i++){
     const user = register_email[i];
     const email = user.email;
   if(email_id == register_email){
@@ -32,8 +31,6 @@ function error(){
   }
   return isExist;
   }
-  
-  saveData();
 }
 
 
@@ -58,6 +55,7 @@ details.push(values);
 
 const detailsInString = JSON.stringify(details);
 localStorage.setItem("Detail", detailsInString); 
+error();
 getData();
 }
 
@@ -68,7 +66,6 @@ function getData(){
   if(detailsInArray){
     details = detailsInArray;
   }
- 
 }
 getData();
 
