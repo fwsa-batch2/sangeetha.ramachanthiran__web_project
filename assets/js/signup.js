@@ -47,6 +47,9 @@ details.push(values);
 
 const detailsInString = JSON.stringify(details);
 localStorage.setItem("Detail", detailsInString); 
+
+
+window.location.href="../index.html"
 }
 
 getData();
