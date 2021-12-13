@@ -18,13 +18,13 @@
 
   <form id="myForm" onsubmit="submitHandler()">
     <div id="table">
-     
+      <span id="emailErr"></span>
     <span id="email">
       <label for="">Email id</label>
     <input id="emailId" type="email" placeholder="Enter email id" required><br><br>
-    <span id="emailErr"></span>
+   
     </span>
-    <span id="invalidMsg"></span>
+   
     <span id="userPassword">
       <label for="">Password</label>
     <input id="password" type="password" placeholder="Enter password" minlength="8" maxlength="8" required><br><br>
@@ -43,12 +43,12 @@
       </b>
       <br><br><br>
 
-      <input id="button" type="Submit" name="Submit"  style="font-size:25px;">
+      <input id="button" type="Submit" value = "Submit"  style="font-size:25px;">
       
       <br><br><br><br><br><br>
     </center>
   </form>
-   
+  <script src="../assets/js/login.js"></script> 
     
 </body>
 
