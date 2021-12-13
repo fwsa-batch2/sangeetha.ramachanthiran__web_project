@@ -28,6 +28,7 @@ const values = {
 }
 
 if (password != confirmPassword) {
+  
   document.getElementById("errorMsg").innerHTML = "This is invalid";
   
   return;
@@ -48,8 +49,10 @@ details.push(values);
 const detailsInString = JSON.stringify(details);
 localStorage.setItem("Detail", detailsInString); 
 
-
+alert("Successfully Registered")
 window.location.href="../index.html"
+
+
 }
 
 getData();
@@ -79,6 +82,7 @@ for (i=0; i<registerEmail.length; i++){
   return isExist;
   
 }
+
 
 
 
