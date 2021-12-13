@@ -1,31 +1,29 @@
 function submitHandler(){
     event.preventDefault();
     
-    let userEmail = document.getElementById("emailId");
-    let password = document.getElementById("password");
-
-    // const userValue = {
-    //     "emailId" : userEmail,
-    //     "passWord" : password
-    // }
-    // console.log("userEmail");
-//     
+    let userEmail = document.getElementById("emailId").value;
     
-}
+    let password = document.getElementById("password").value;
+
+    let localName = JSON.parse(localStorage.getItem("Detail"));
 
 
-function errorFunction(){
-    const localName = JSON.parse(localStorage.getItem("Detail"));
-
-    for(i=0; i< localName.length; i++){
-        const storeData = localName[i];
-        const email = storeData.userEmail;
-        if(userValue != storeData){ 
-            document.getElementById("invalidMsg").innerHTML = "Not Registered";
-            alert("Not Registered");
-        }
-        else{
-           
+    if(localName != null){
+        for(let i=0; i<localName.length; i++){
+            if(localName[i].EmailId != userEmail){
+                alert("Not Registered");
+                break;
+            }
+            else{
+                alert("Hasan");
+             window.location.href="../index.html";
+             break;
+            }
         }
     }
+    else{
+        alert("Please Register ");
+    }
 }
+
+
