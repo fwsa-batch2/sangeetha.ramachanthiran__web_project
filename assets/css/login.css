@@ -37,7 +37,12 @@
   border-color: white;
   margin-left: 3vh;
 }
-
+#emailErr{
+  color: red;
+  font-size: 3vh;
+  margin-left: 50%;
+  
+}
 
 
 #button:hover {
