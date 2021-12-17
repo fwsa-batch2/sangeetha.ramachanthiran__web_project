@@ -17,16 +17,16 @@
     <div id="table">
      <span id="name"> 
        <label for="">Name</label>
-      <input id="userName" type="text" placeholder="Enter name" required> <br><br>
+      <input id="userName" type="text" pattern="[A-Za-z]{3,20}$" title="Name should contain only alphabet" placeholder="Enter name" required> <br><br>
     </span>
     <span id="email">
       <label for="">Email id</label>
-    <input id="emailId" type="email" placeholder="Enter email id" required ><br><br>
+    <input id="emailId" type="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{3,}$" title="Email should contain numbers and only lowercase! " placeholder="Enter email id" required ><br><br>
     <span id="emailErr"></span>
     </span>
     <span id="userPassword">
       <label for="">Password</label>
-    <input id="password" type="password" placeholder="Enter password" minlength="8" maxlength="8" required><br><br>
+    <input id="password" type="password"  placeholder="Enter password" minlength="8" maxlength="8" required><br><br>
     </span>
    <span id="confirmPassword">
     <label for="">Confirm password</label>
