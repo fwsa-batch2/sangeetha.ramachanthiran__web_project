@@ -3,7 +3,7 @@ function getData(){
  
   const getLocal =  localStorage.getItem("Detail");
   const detailsInArray = JSON.parse(getLocal);
-  if(detailsInArray){
+  if(detailsInArray != null){
     details = detailsInArray;
   }
 }
@@ -46,9 +46,13 @@ if (password != confirmPassword) {
   
   getData();
   function error(myParameter){
+    console.group("error");
     const registerEmail = JSON.parse(localStorage.getItem("Detail"));
+
+
     let isExist = false;
-  for (i=0; i<registerEmail.length; i++){
+  if(registerEmail != null){
+    for (i=0; i<registerEmail.length; i++){
       const user = registerEmail[i];
       const email = user.EmailId;
     if(myParameter == email){
@@ -62,7 +66,8 @@ if (password != confirmPassword) {
     }
     
     }
-    // console.log(isExist);
+  }
+    console.groupEnd("error");
     return isExist;
     
   }
