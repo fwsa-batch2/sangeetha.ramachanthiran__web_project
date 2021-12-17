@@ -1,6 +1,7 @@
 let detailList =[];
 
 function onPageLoad(){
+  console.group("onPageLoad")
     const userDetailsInArray= JSON.parse(localStorage.getItem("Detail"));
     // console.log(userDetailsInArray);
 
@@ -9,7 +10,7 @@ function onPageLoad(){
        
     }
 
-    
+console.groupEnd("onPageLoad")    
 console.log(detailList);
 }
 onPageLoad();  
