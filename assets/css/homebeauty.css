@@ -5,7 +5,7 @@ body {
 .text_head {
   position: absolute;
   top: 10%;
-  right: 25px;
+  right: 5vh;
   left: 40%;
   bottom: 15%;
   font-size: 5vh;
@@ -38,7 +38,7 @@ body {
 }
 
 .fontsize {
-  font-size: 40px;
+  font-size: 4vh;
   color: black;
   text-align: center;
 }
