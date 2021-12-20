@@ -1,3 +1,11 @@
+body{
+    background-color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
 #heading{
     font-size: 8vh;
     margin-left: 35%;
@@ -16,43 +24,57 @@
 }
 
 .imageStyle{
-    
-   float: left;
+    margin-left: 20%;
+    margin-top: 10%;
+    box-shadow: -10px 10px 20px  lightslategrey;
+  
 }
 
 .style{
-    float: right;
-}
-
-.lesson_content{
+   
     margin-left: 20%;
-    margin-right: 55%;
-  
-  /* width: 60%;
-  margin-left: 5%;
-  margin-top: auto;
-  float: left;
-  border-bottom-style:groove;
-  border-bottom-color:  #63BFBF;
-  box-shadow: -10px 10px 20px  #63BFBF;
-  padding: 20px;
-  border-radius: 25px; */
-  
-}
-.lesson_content p{
+    margin-top: 10%;
+    box-shadow: 10px 10px 20px  lightslategrey;
+} 
+
+#left_content{
+    margin-top: 15%;
+    margin-left: 15%;
     font-size: 3vh;
-    color: black;
-    margin-top: 25%;
-}
-#linkLine{
-    color: cornflowerblue;
+    margin-right: 5%;
+    
+    
 }
 
-.drawing_content{
-    margin-left: 2%;
-    margin-right: 55%;
-}
-.drawing_content p{
+#right_content{
+    margin-top: 15%;
+    margin-left: 15%;
     font-size: 3vh;
-    color: black;
+    margin-right: 5%;
+   
+}
+
+.leftSide{
+    width: 20%;
+    
+    margin-left: 25%;
+    margin-top: auto;
+    float: left;
+    border-bottom-style:groove;
+    border-bottom-color:  lightslategray;
+    box-shadow: -10px 10px 20px  lightslategray;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.rightSide{
+    width: 20%;
+    margin-right: 25%;
+    margin-top: auto;
+    float: right;
+    border-bottom-style:groove;
+    border-bottom-color:  lightslategray;
+    box-shadow: 10px 10px 20px  lightslategray;
+    padding: 20px;
+    border-radius: 25px;
 }
