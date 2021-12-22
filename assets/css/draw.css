@@ -1,0 +1,51 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  background-color: lightgray;
+  color: white;
+}
+#text_head{
+   font-size: 3vh;
+   color: rgb(180, 101, 22);
+   text-shadow: 2px 2px white;
+}
+#pencil{
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+ 
+}
+#pencil:hover{
+  background-color: rgb(187, 184, 184);
+}
+#drawingTools{
+    border-left: 3px solid black;
+    height: 100%;
+    width: 5%;
+    position:absolute;
+    left: 0%;
+    background-color: rgb(87, 84, 84);
+}
+#chooseColor{
+    margin-left: 2vh;
+    width: 6vh;
+    height: 4vh; 
+}
+#lineWidth{
+    width: 8vh;
+    margin-top: 2vh;
+    margin-left: 1vh;
+    margin-bottom: 2vh;
+}
+#clear{
+  margin-left: 2vh;
+  width: 6vh;
+  height: 3vh;
+}
+#canvaSheet {
+  background: white;
+  width: 60%;
+  height: 60%;
+  margin-left: 25%;
+  margin-top: 8%;
+}

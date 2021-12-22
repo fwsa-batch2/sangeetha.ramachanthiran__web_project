@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Draw</title>
+    <link rel="stylesheet" href="../assets/css/draw.css">
+</head>
+<body>
+    <section id="container">
+        <div id="drawingTools">
+            <h1 id="text_head">
+               Draw
+            </h1>
+            <button id="pencil"><img src="../assets/img/toolPencil.png" alt="Pencil" width="30vh" height="25vh"></button> 
+            <input id="chooseColor" type="color" >
+            <input id="lineWidth" type="number">
+            <button id="clear" >Clear</button>
+        </div>
+        <div id="drawSheet">
+            <canvas id="canvaSheet" ></canvas> 
+        </div>
+    </section>
+  <script src="../assets/js/draw.js"></script>
+</body>
+</html>
