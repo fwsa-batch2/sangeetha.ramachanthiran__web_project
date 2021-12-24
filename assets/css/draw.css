@@ -13,11 +13,25 @@ body {
 #pencil{
   margin-left: 2vh;
   margin-bottom: 2vh;
- 
-}
+ }
 #pencil:hover{
   background-color: rgb(187, 184, 184);
 }
+#text{
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+}
+#text:hover{
+  background-color: rgb(187, 184, 184);
+}
+#fillColor{
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+}
+#fillColor:hover{
+  background-color: rgb(187, 184, 184);
+}
+
 #drawingTools{
     border-left: 3px solid black;
     height: 100%;
