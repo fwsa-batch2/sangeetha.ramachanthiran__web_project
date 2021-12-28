@@ -59,3 +59,210 @@ draw.addEventListener('mouseup', e =>{
 });
 
 draw.addEventListener('mousemove',canva);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let shopArts = (function(){
+
+    arts = [];
+  
+    //Constructor
+    function cartItem(name, rate, count){
+      this.name = name;
+      this.rate = rate;
+      this.count = count;
+    }
+  
+    //Save items
+    function saveItems(){
+      sessionStorage.setItem("artItems", JSON.stringify(arts));
+  
+    }
+  
+    //Load arts
+    function loadArt(){
+      arts = JSON.parse(sessionStorage.getItem("artItems"));
+  
+    }
+    if(sessionStorage.getItem("artItems")!= null){
+      loadArt();
+    }
+  
+    
+    let object ={};
+  
+    //Add to cart
+    object.addItemToCart = function(name, rate, count){
+      for(let item in arts){
+        if(arts[item],name === name){
+          arts[item].count ++;
+          saveItems();
+          return;
+        }
+      }
+      let item = new Item(name, rate, count);
+      arts.push(item);
+      saveItems();
+    }
+  
+    //set count from item
+    object.setCountForItem = function(name, count){
+      for(let i in arts){
+        if(arts[i].name === name){
+          arts[i].count = count;
+          break;
+        }
+      }
+    }
+  
+    //clear arts
+    object.clearArts = function(){
+      arts =[];
+      saveItems();
+    }
+  
+    //Count cart
+    object.totalCount = function(){
+      let totalCount = 0;
+      for(let item in arts){
+        totalCount += arts[item].count;
+      }
+      return totalCount;
+    }
+  
+    //Total arts
+    object.totalArt = function(){
+      let totalArt = 0;
+      for(let item in arts){
+        totalArt += arts[item].rate * arts[item].count;
+      }
+      return Number(totalArt.toFixed(2));
+    }
+  
+    //List arts
+    object.listArt = function(){
+    let artCopy =[];
+    for(i in cart){
+      item = arts[i];
+      itemCopy ={};
+      for(p in item){
+        itemCopy[p] = Item[p];
+      }
+      itemCopy.total = Number(item.rate * item.count).toFixed(2);
+      artCopy.push(itemCopy);
+    }
+    return artCopy;
+    }
+  
+  
+    return object;
+  })();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // let butterfly = [];
+  
+  // function getButterfly(){
+   
+  //   const getLocal =  localStorage.getItem("items");
+  //   const butterflyInArray = JSON.parse(getLocal);
+  //   if(butterflyInArray != null){
+  //   //  alert("hello");
+  //   console.log("hello");
+  //   }
+  // }
+  
+  // function kaushikButterfly(){
+  //   event.preventDefault();
+  //   let butterflyRate = document.getElementById("rateOfButterfly").innerText
+  //   let butterflyImage = document.getElementById("butterfly").src;
+   
+  //   const butterflyValues ={
+  //     "image" :butterflyImage ,
+  //     "Rate" : butterflyRate
+  //   }
+  
+  //   butterfly.push(butterflyValues);
+  //   const butterflyInString = JSON.stringify(butterfly);
+  //   localStorage.setItem("items", butterflyInString);
+  
+  //   // alert("Item carted");
+  //   // window.location.href="./../pages/addToCart.html"
+  // }
+  // getButterfly();
+  
+  // let doraBuji = [];
+  
+  // function getDoraBuji(){
+   
+  //   const localDoraBuji =  localStorage.getItem("items");
+  //   const doraBujiInArray = JSON.parse(localDoraBuji);
+  //   if(doraBujiInArray != null){
+  //   //  alert("hello");
+  //   console.log("hello");
+  //   }
+  // }
+  
+  // function smileDoraBuji(){
+    
+  //   let doraBujiRate = document.getElementById("rateOfDoraBuji").innerText
+  //   let doraBujiImage = document.getElementById("doraBuji").src;
+   
+  //   const doraBujiValues ={
+  //     "image" :doraBujiRate ,
+  //     "Rate" : doraBujiImage
+  //   }
+  
+  //   doraBuji.push(doraBujiValues);
+  //   const doraBujiInString = JSON.stringify(doraBuji);
+  //   localStorage.setItem("items", doraBujiInString);
+  
+  //   // alert("Item carted");
+  //   // window.location.href="./../pages/addToCart.html"
+  // }
+  // getDoraBuji();
+  
+  
+
+    
+    
+    
+
+
