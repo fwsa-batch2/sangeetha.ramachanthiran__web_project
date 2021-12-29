@@ -84,6 +84,48 @@ draw.addEventListener('mousemove',canva);
 
 
 
+// document.getElementById("cartCont").innerHTML = ""
+// for(var i=0;i<3;i++){
+
+// const testhtml = `<div class="leftContainer">
+//           <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="8%" height="40">
+         
+//          <button class="addToCart" onclick="addToCart()">
+//           <img  src="../assets/img/addToCart.png" alt="addToCart" width="11%" height="50" >
+//          </button> 
+         
+//           <img class="image" id="butterfly" src="../assets/img/kaushik_butterfly.jpeg" alt="kaushik's butterfly" width="50%" height="200">
+//           <p class="leftContent"><span class="artName" id="name">`+testArr[i][0]+`</span><br> Pencil drawing <br><br><br> <span class="head">`+testArr[i][2]+`</span><br>
+//           Chennai <span class="rate" id="rateOfButterfly">`+testArr[i][1]+`</span></p>
+//         </div>
+//   `
+// document.getElementById("cartCont").innerHTML += testhtml;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let shopArts = (function(){
 
     arts = [];

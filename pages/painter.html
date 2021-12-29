@@ -8,43 +8,45 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/homebeauty.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home">Home</a>
-      
-        <div class="dropdown">
-          <button class="dropbtn">Arts 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Pencil Arts</a>
-            <a href="#">Painting</a>
-          </div>
-        </div> 
-        <div class="dropdown">
-          <button class="dropbtn">Artists 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#"> Pencil Artists</a>
-            <a href="#">Painter Artists</a>
-          </div>
-        </div> 
-        <div class="dropdown">
-          <button class="dropbtn">Lesson
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#"> Drawing Lesson</a>
-            <a href="#">Paintings</a>
-            <a href="#">Draw</a>
-          </div>
-        </div> 
-        <a href="./pages/login.html">Login</a>
-        <a href="./pages/signIn.html">Sign In</a>
+  <div class="navbar">
+    <div id="text_head">
+      Smiley World Arts
+    </div>
+    
+    <a href="#home">Home</a>
+  
+    <div class="dropdown">
+      <button class="dropbtn">Arts</button>
+      <div class="dropdown-content">
+        <a href="./pages/pencilarts.html">Pencil Arts</a>
+        <a href="#">Painting</a>
+        <a href="./pages/buyArts.html">Buy Arts</a> 
+        <a href="#">Buy materials</a>
       </div>
-      <div id="headContainer">
-        <img src="../assets/img/navimage.jpg" alt="Header Image" width="100%" height="200">
-        <h1 class="text_head"><b>Smiley World Arts</b></h1>
-      </div> 
+    </div> 
+   
+    <div class="dropdown">
+      <button class="dropbtn">Artists 
+      
+      </button>
+      <div class="dropdown-content">
+        <a href="./pencilArtists.html"> 
+          Pencil Artists</a>
+        <a href="#">Painter Artists</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Lesson
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="./pages/drawingLesson.html" onclick="clickHandler()"> Drawing Lesson</a>
+        <a href="#">Paintings</a>
+        <a href="./draw.html">Draw</a>
+      </div>
+    </div> 
+    <a href="./pages/login.html">Login</a>
+    <a href="./pages/signup.html">Sign Up</a>
+  </div>
 </body>
 </html>
