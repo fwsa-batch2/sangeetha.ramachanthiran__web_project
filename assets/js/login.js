@@ -48,6 +48,7 @@ function submitHandler(){
    const LoggedUserInString = JSON.stringify(loggedUser);
    localStorage.setItem("LoggedInUser", LoggedUserInString); 
    alert("Success");
+   window.location.href="./../pages/buyArts.html"
 
   }
   else{

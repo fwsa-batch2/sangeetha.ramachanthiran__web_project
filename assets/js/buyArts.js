@@ -1,24 +1,25 @@
 
-let arrayOfProducts = [["Butterfly-on-hand","Pencildrawing","Kaushik","Chennai","Rs-100","../assets/img/kaushik_butterfly.jpeg"],
-["Dora-Buji","Color-pencil-drawing","Ismail","Thoothukudi","Rs-200","../assets/img/smile_dora.jpg"],
-["Mountain","Painting","Ismail","Thoothukudi","Rs-500","../assets/img/smile_mountain_painting.jpg"],
-["One-Perspective-Room","Sketch","Ismail","Thoothukudi","Rs-300","../assets/img/smile_rooms.jpg"],
-["Mother-Love","Pencil drawing","Annapoorani","Theni","Rs-120","../assets/img/poorani_mothersLove.jpeg"],
-["Attractive-eyes","Pencil-drawing","Sangeetha","Chennai","Rs-100","../assets/img/sangee_eyes.jpg"],
-["Super-Heros","Color-pencil-drawing","Ismail","Thoothukudi","Rs-100","../assets/img/smile_superHeros.jpg"],
-["Birds","Painting","Kaushik","Chennai","Rs-500","../assets/img/kaushik_birds_painting.jpeg"],
-["Cute-baby-sleeping","Pencil-drawing","Annapoorani","Theni","Rs-100","../assets/img/poorani_baby.jpeg"],
-["Banana","Color-pencil-drawing","Ismail","Thoothukudi","Rs-100","../assets/img/smile_banana.jpg"],
-["Forest","Painting","Ismail","Thoothukudi","Rs-1000","../assets/img/smile_forest_painting.jpg"],
-["Three-sisters-love","Pencil-drawing","Sangeetha","Chennai","Rs-100","../assets/img/Sangee_sistersLove.jpg"],
-["Subway-surfers","Color-pencil-drawing","Ismail","Thoothukudi","Rs-100","../assets/img/smile_subway.jpg "],
-["Actor-Vijay","Pencil-drawing","Sangeetha","Chennai","Rs-100","../assets/img/sangee_thalapathy.jpg"],
-["Apple","Color pencil drawing","Ismail","Thoothukudi"," Rs-100","../assets/img/smile_apple.jpg"],
-["Ear Phones","Pencil drawing","Ismail","Thoothukudi","Rs-100","../assets/img/smile_headset.jpeg"]];
 
-let array = arrayOfProducts[0][1];
+let arrayOfProducts = [{"artName":"Butterfly-on-hand","artType":"Pencildrawing","artistName":"Kaushik","place":"Chennai","artPrice":"100","artImage":"../assets/img/kaushik_butterfly.jpeg"},
+{"artName":"Mountain","artType":"Painting","artistName":"Ismail","place":"Thoothukudi","artPrice":"500","artImage":"../assets/img/smile_mountain_painting.jpg"},
+{"artName":"Dora-Buji","artType":"Color-pencil-drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":"200","artImage":"../assets/img/smile_dora.jpg"},
+{"artName":"One-Perspective-Room","artType":"Sketch","artistName":"Ismail","place":"Thoothukudi","artPrice":"300","artImage":"../assets/img/smile_rooms.jpg"},
+{"artName":"Mother-Love","artType":"Pencil drawing","artistName":"Annapoorani","place":"Theni","artPrice":"120","artImage":"../assets/img/poorani_mothersLove.jpeg"},
+{"artName":"Attractive-eyes","artType":"Pencil-drawing","artistName":"Sangeetha","place":"Chennai","artPrice":"100","artImage":"../assets/img/sangee_eyes.jpg"},
+{"artName":"Super-Heros","artType":"Color-pencil-drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":"100","artImage":"../assets/img/smile_superHeros.jpg"},
+{"artName":"Birds","artType":"Painting","artistName":"Kaushik","place":"Chennai","artPrice":"500","artImage":"../assets/img/kaushik_birds_painting.jpeg"},
+{"artName":"Cute-baby-sleeping","artType":"Pencil-drawing","artistName":"Annapoorani","place":"Theni","artPrice":"100","artImage":"../assets/img/poorani_baby.jpeg"},
+{"artName":"Banana","artType":"Color-pencil-drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":"100","artImage":"../assets/img/smile_banana.jpg"},
+{"artName":"Forest","artType":"Painting","artistName":"Ismail","place":"Thoothukudi","artPrice":"1000","artImage":"../assets/img/smile_forest_painting.jpg"},
+{"artName":"Three-sisters-love","artType":"Pencil-drawing","artistName":"Sangeetha","place":"Chennai","artPrice":"100","artImage":"../assets/img/Sangee_sistersLove.jpg"},
+{"artName":"Subway-surfers","artType":"Color-pencil-drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":"100","artImage":"../assets/img/smile_subway.jpg "},
+{"artName":"Actor-Vijay","artType":"Pencil-drawing","artistName":"Sangeetha","place":"Chennai","artPrice":"100","artImage":"../assets/img/sangee_thalapathy.jpg"},
+{"artName":"Apple","artType":"Color pencil drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":" 100","artImage":"../assets/img/smile_apple.jpg"},
+{"artName":"Ear Phones","artType":"Pencil drawing","artistName":"Ismail","place":"Thoothukudi","artPrice":"100","artImage":"../assets/img/smile_headset.jpeg"}];
 
-console.log(array);
+let array = arrayOfProducts[0].artName;
+
+// console.log(array);
 
 creatingContainer();  
 
@@ -28,16 +29,66 @@ for(var i=0;i<arrayOfProducts.length;i++){
 
 const containerContains = `<div class="productContainer">
           <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="10%" height="10%">
-          <img class="addToCart" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" onclick="addToCart()">
-          <img class="image" id="butterfly" src="`+arrayOfProducts[i][5]+` " alt="kaushik's butterfly" width="60%" height="200">
-          <p class="Content"><span class="artName" id="name">`+arrayOfProducts[i][0]+`</span><br> `+arrayOfProducts[i][1]+`<br><br><br> <span class="artistName">`+arrayOfProducts[i][2]+`</span><br>
-          `+arrayOfProducts[i][3]+`<span class="rate" id="rateOfArts">`+arrayOfProducts[i][4]+`</span></p>
+          <img class="addToCart" id="addToCart_`+i+`" art_no="`+i+`" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" onclick="addToCart()">
+          <img class="image" id="images_`+i+`" src="`+arrayOfProducts[i].artImage+` " alt="kaushik's butterfly" width="60%" height="200">
+          <p class="Content"><span class="artName" id="name_`+i+`">`+arrayOfProducts[i].artName+`</span><br> `+arrayOfProducts[i].artType+`<br><br><br> <span class="artistName">`+arrayOfProducts[i].artistName+`</span><br>
+          `+arrayOfProducts[i].place+`<span class="rate" id="rateOfArts_`+i+`">`+arrayOfProducts[i].artPrice+`</span></p>
         </div>
   `
 document.getElementById("container").innerHTML += containerContains;
 }
 }
 
+let items = [];
+// let arrayOfArtName = [];
+// let arrayOfPrice =[];
+
+function addToCart(){
+  // console.log(event.target.id);
+
+  let artNo = document.getElementById(event.target.id).getAttribute("art_no");
+
+  console.log(artNo);
+
+  let artsName = arrayOfProducts[artNo].artName;
+  console.log(artsName);
+
+  let artsPrice = arrayOfProducts[artNo].artPrice;
+  console.log(artsPrice);
+
+  let artsImage = arrayOfProducts[artNo].artImage;
+  console.log(artsImage);
+
+  let values = {
+   "name": artsName,
+   "image" : artsImage,
+   "rate" : artsPrice
+  }
+  items.push(values);
+
+  let itemsInString = JSON.stringify(items);
+  let itemsInLocal = localStorage.setItem("item", itemsInString );
+  console.log(itemsInLocal);
+
+  
+  document.getElementById("alerts").innerHTML = "Successfully carted";
+  
+  }
+
+function getLocalStorage() {
+  let getItemsFromLocal = localStorage.getItem("item");
+  const itemsInArray = JSON.parse(getItemsFromLocal);
+  if(itemsInArray != null) {
+    items = itemsInArray;
+  }
+  
+}
+
+
+
+
+
+getLocalStorage();
 
 
 

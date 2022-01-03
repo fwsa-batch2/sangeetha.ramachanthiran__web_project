@@ -39,7 +39,7 @@ if (password != confirmPassword) {
   
   
   alert("Successfully Registered")
-  window.location.href="./../pages/login.html"
+  window.location.href="./../index.html"
   
   
   }

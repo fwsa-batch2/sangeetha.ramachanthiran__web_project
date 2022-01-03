@@ -1,0 +1,76 @@
+.addToCart_products{
+    /* background-color: cyan; */
+    display: flex; 
+    flex-flow: column; 
+    margin: 0%;
+}
+.cart_products{
+/* background-color: cadetblue; */
+    border-width: 1px;
+    border-bottom-style:groove;
+    border-bottom-color:  black; 
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+    height: 250px;
+}
+.image{
+    
+    width: 15%;
+    background: yellow;
+    height: 200px;
+    position: absolute;
+    flex: none;
+    left: 5%;
+    box-shadow: -10px 10px 20px  lightslategrey;
+   
+}
+
+.artName{
+   padding-left: 3%;
+   padding-top: 5%;
+   position: absolute;
+   left: 20%;
+   width: 10%;
+   font-size: 3vh;
+   height: 200px;
+   color: black;
+   margin-left: 0%;
+}
+.rate{
+   font-size: 3vh;
+   position: relative;
+   width: 15%;
+   left: 14%;
+   margin-left: 25%;
+   margin-top: 5%;
+}
+
+#decrease{
+    margin-left: 50%;
+}
+.button{
+    background-color: lightgray;
+    font-size: 2vh;
+}
+.button:hover{
+    background-color: grey;
+}
+
+#number{
+    width: 15%;
+}
+.priceValue{
+    font-size: 3vh;
+    margin-left: 70%;
+    
+}
+.totalValue{
+   font-size: 3vh;
+   width: 25%;
+   float: right;
+   margin-top: 5%;
+}
+#totalRate{
+
+}

@@ -33,7 +33,11 @@ body{
     margin-top: 5%;
     
 }
-
+#alerts{
+    margin-top: 5%;
+    margin-left: 50%;
+    font-size: 2vh;
+}
 .Content{
    
     font-size: 2vh;
@@ -60,9 +64,29 @@ p{
     font-size: 3vh;
     color: black;
 }
+#cartPage{
+    position: fixed;
+    padding-bottom: 10px;
+    padding-left: 70%;
+    font-size: 2vh;
+    margin-top: 5%;
+    padding-top: 1%;
+    background-color: floralwhite;
+    width: 50%;
+}
+.cart_btn{
+    padding: 5px;
+    margin-left: 30%; 
+}
+.cart_btn:hover{
+    cursor:pointer;
+    padding: 5px;
+    background-color: cornsilk;
+}
 .wishlist{
     margin-left: 70%;
     margin-top: 5%;
+    cursor: pointer;
 }
 
 .cartContainer{
@@ -76,4 +100,7 @@ p{
     padding-bottom: 10%;
     padding-left: 10%;
     padding-top: 5%;
+}
+.addToCart{
+cursor: pointer;
 }
