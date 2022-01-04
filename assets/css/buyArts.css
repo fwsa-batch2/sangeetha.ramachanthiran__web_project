@@ -65,18 +65,15 @@ p{
     color: black;
 }
 #cartPage{
-    position: fixed;
     padding-bottom: 10px;
     padding-left: 70%;
     font-size: 2vh;
-    margin-top: 5%;
-    padding-top: 1%;
+    padding-top: 6%;
     background-color: floralwhite;
     width: 50%;
 }
 .cart_btn{
-    padding: 5px;
-    margin-left: 30%; 
+   margin-left: 30%; 
 }
 .cart_btn:hover{
     cursor:pointer;

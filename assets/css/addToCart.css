@@ -72,5 +72,6 @@
    margin-top: 5%;
 }
 #totalRate{
-
+border-bottom-color: gray;
+border-bottom-style: groove;
 }

@@ -13,12 +13,13 @@
 * Email id entered must not exist in local storage already.
 * password and confirm password must contain 8 characters.
 * password and confirm password should be same.
-* if everything is validated,showing success message and redirected to login page.
+* if everything is validated,showing success message and redirected to index page.
 
 
 ### Login 
+* Some of the page can be access only after login.
 * All input fields are required.
 * Email id and password should match with the local storage values.
-* if everything is validated,redirect to home page.
+* if everything is validated,redirect to respective page.
 
 
