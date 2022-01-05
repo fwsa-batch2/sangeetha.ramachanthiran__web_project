@@ -3,8 +3,10 @@
 ## Features
    1. Sign up -- Completed
    2. Login -- Completed
-   3. Buy arts -- In progress
-   4. draw -- In progress
+   3. Add to cart -- Completed
+   4. Sell art -- In progress
+    
+   
 
 ### Sign up 
 * All input fields are required.
@@ -23,3 +25,5 @@
 * if everything is validated,redirect to respective page.
 
 
+### Add to cart 
+* If user want to buy arts from the website.

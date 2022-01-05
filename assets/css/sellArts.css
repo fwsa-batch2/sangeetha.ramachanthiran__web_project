@@ -1,0 +1,71 @@
+
+.myForm{
+    margin-right: 5%;
+    margin-left: 40%;
+    margin-top: 6%;
+    background-color: lightsteelblue;
+    width: 35%;
+    height: 620px;
+    position: relative;
+}
+.images{
+   position: absolute;
+   left: 0%;
+   top: 0%;
+   margin-left: 12%;
+   margin-top: 6%;
+}
+#artistName{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#place{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#artName{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#artType{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%; 
+}
+#price{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#image{
+    padding: 5px;
+    border-radius: 5vh;
+    font-size: 2vh;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.addButton{
+    margin-top: 5%;
+    margin-left: 55%;
+    margin-bottom: 5%;
+    font-size: 3vh;
+}

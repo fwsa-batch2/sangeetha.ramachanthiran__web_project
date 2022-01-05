@@ -72,6 +72,11 @@
    margin-top: 5%;
 }
 #totalRate{
-border-bottom-color: gray;
-border-bottom-style: groove;
+    border-bottom-color: gray;
+    border-bottom-style: groove;
+}
+.removeBtn{
+    float: right;
+    margin-right: 3%;
+    cursor: pointer;  
 }

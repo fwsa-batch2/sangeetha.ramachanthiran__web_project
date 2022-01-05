@@ -95,9 +95,7 @@ a:active {
   margin: 0;
   padding-left: 65%;
   padding-top: 20px;
-  padding-bottom: 10px;
-    
-    
+  padding-bottom: 10px;   
   }
   
   .navbar a {
@@ -108,13 +106,10 @@ a:active {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-   
-  
   }
   
   .dropdown {
-    float: left;
-    
+    float: left;  
   }
   
   .dropdown .dropbtn {
