@@ -4,14 +4,14 @@
    1. Sign up -- Completed
    2. Login -- Completed
    3. Add to cart -- Completed
-   4. Sell art -- In progress
+   4. Sell art -- Completed
     
    
 
 ### Sign up 
 * All input fields are required.
 * Name should contains only alphabets and must have 3 to 20 characters.
-* Email should contains only lowercase.
+* Email should contains only lowercase and add numbers before @ symbol.
 * Email id entered must not exist in local storage already.
 * password and confirm password must contain 8 characters.
 * password and confirm password should be same.
@@ -26,4 +26,4 @@
 
 
 ### Add to cart 
-* If user want to buy arts from the website.
+* If user want to buy drawings from the website.

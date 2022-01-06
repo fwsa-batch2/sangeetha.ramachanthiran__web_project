@@ -62,9 +62,8 @@ p{
     padding-bottom: 10px;
     padding-left: 10%;
     font-size: 2vh;
-    margin-top: 6%;
-    
-    width: 30%;
+    background-color: gainsboro;
+    width: 90%;
 }
 .cart_btn{
    margin-left: 5%; 
