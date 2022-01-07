@@ -20,13 +20,14 @@ function creatingContainer() {
       artsPrice: artsPrice,
     }
     myArray.push(values); 
+    
   }
   document.getElementById("container").innerHTML = "";
   for (let i = 0; i < myArray.length; i++) {
     const containerContains =
       `<div class="productContainer">
           <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="10%" height="10%">
-          <img class="addToCart" id="addToCart_` +i +`" art_no="` +i +`" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" data-index="${i}" onclick="addToCart()}">
+          <img class="addToCart" id="addToCart_` +i +`" value="` +i +`" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" data-index="${i}" onclick="{addToCart(event)}">
           <img class="image" id="images_` +i +`" src="` +myArray[i].imageSrc +` " alt="drawing" width="60%" height="200">
           <p class="Content">
           <span class="artName" id="name_` +i +`">` +myArray[i].artsName +`</span>
@@ -41,11 +42,12 @@ creatingContainer();
 
 let items = [];
 function addToCart(event) {
-  const index = event.target.dataset.index
-  const art = myArray[index];
-  let artsName = myArray[art].artsName;
-  let artsPrice = myArray[art].artsPrice;
-  let artsImage = myArray[art].imageSrc;
+  let index = event.target.dataset.index;
+  let art = myArray[index];
+  console.log(art);
+  let artsName = art.artsName;
+  let artsPrice = art.artsPrice;
+  let artsImage = art.imageSrc;
   let values = {
     name: artsName,
     image: artsImage,
@@ -64,7 +66,10 @@ function getLocalStorage() {
   if (itemsInArray != null) {
     items = itemsInArray;
   }
+  
 }
 
 getLocalStorage();
+
+
 console.log("hello");
