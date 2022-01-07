@@ -1,8 +1,39 @@
-
+#cartPage{
+    background-color: gainsboro;
+    color: black;
+    box-shadow: 10px 10px 20px grey;
+    padding-bottom: 4px;
+    padding-left: 3%;
+    font-size: 2.5vh;
+    width: 100%;
+    height: 25px;
+    padding-top: 5%;
+    z-index: 1;
+}
+.cartBtn{
+    margin-left: 3%; 
+    width: 5%;
+    padding: 7px;
+ }
+ .cartBtn:hover{
+    cursor: pointer;
+    padding: 5px;
+    background-color: #5e5d5d;
+}
+.buy{
+   margin-left: 3%; 
+   width: 5%;
+   padding: 7px;
+}
+.buy:hover{
+    cursor:pointer;
+    padding: 5px;
+    background-color: #5e5d5d;
+}
 .myForm{
     margin-right: 5%;
-    margin-left: 40%;
-    margin-top: 6%;
+    margin-left: 40.5%;
+    margin-top: 4%;
     background-color: lightsteelblue;
     width: 35%;
     height: 620px;
@@ -13,7 +44,7 @@
    left: 0%;
    top: 0%;
    margin-left: 12%;
-   margin-top: 6%;
+   padding-top: 10.5%;
 }
 #artistName{
     padding: 5px;

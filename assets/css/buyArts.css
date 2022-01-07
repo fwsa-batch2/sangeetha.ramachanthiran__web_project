@@ -27,7 +27,8 @@ body{
     margin-left: 20%;
     margin-top: 5%;
 }
-#alerts{
+.addedToCart{
+    text-align: center;
     margin-top: 5%;
     margin-left: 50%;
     font-size: 2vh;
@@ -37,8 +38,6 @@ body{
     color: grey;
     margin-left: 5%;
 }
-
-
 p{
     color: grey;
     text-shadow: 1px 1px grey;
@@ -58,15 +57,21 @@ p{
     color: black;
 }
 #cartPage{
-    position: fixed;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    font-size: 2vh;
     background-color: gainsboro;
-    width: 90%;
+    color: black;
+    box-shadow: 10px 10px 20px grey;
+    padding-bottom: 4px;
+    padding-left: 3%;
+    font-size: 2.5vh;
+    width: 100%;
+    height: 25px;
+    padding-top: 5%;
+    z-index: 1;
 }
 .cart_btn{
-   margin-left: 5%; 
+    margin-left: 3%; 
+    width: 5%;
+    padding: 7px;
 }
 .cart_btn:hover{
     cursor:pointer;
@@ -74,7 +79,9 @@ p{
     background-color: #5e5d5d;
 }
 .sell{
-   margin-left: 5%; 
+   margin-left: 3%; 
+   width: 5%;
+   padding: 7px;
 }
 .sell:hover{
     cursor:pointer;
@@ -100,4 +107,11 @@ p{
 }
 .addToCart{
 cursor: pointer;
+}
+#link{
+    text-align: center;
+margin-left: 0%;
+font-size: 2vh;
+margin-top: 2%;
+position: fixed;
 }

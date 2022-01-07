@@ -95,7 +95,8 @@ a:active {
   margin: 0;
   padding-left: 65%;
   padding-top: 20px;
-  padding-bottom: 10px;   
+  padding-bottom: 10px;  
+  z-index: 1; 
   }
   
   .navbar a {

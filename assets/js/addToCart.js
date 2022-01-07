@@ -26,12 +26,6 @@ function getItem(){
 }
 getItem();
 
-function removeItem() {
-  const itemsInLocal = localStorage.getItem("cartItem");  
-  const getLocalInArray = JSON.parse(itemsInLocal); 
-  
-}
-
 function increase() {
   let targetElement = event.target.value;
   let inputNumber = document.getElementById("input_"+targetElement).value;
@@ -45,7 +39,6 @@ function increase() {
   let target = event.target.value;
   
   if(amount != null){
-    
     document.getElementById("price_"+target).innerHTML = "Rs."+amount;
     document.getElementById("price_"+target).setAttribute("value",amount);
   }
@@ -57,10 +50,8 @@ function decrease() {
   let targetValue = event.target.value;
   let inputNumber = document.getElementById("input_"+targetValue).value;
   let inputInArray = JSON.parse(inputNumber);
-
   let decreaseNum = inputNumber>0 ? inputInArray-1 : 0;
   if(decreaseNum != null) {
-    
     document.getElementById("input_"+targetValue).value = decreaseNum;
   }
   let artPrice = document.getElementById("rateOfArts_"+targetValue).getAttribute("value");
@@ -68,7 +59,6 @@ function decrease() {
   let target = event.target.value;
   
   if(amount != null){
-    
     document.getElementById("price_"+target).innerHTML = "Rs."+amount;
     document.getElementById("price_"+target).setAttribute("value",amount);
   }
@@ -79,16 +69,11 @@ function decrease() {
   let total = 0;
   let priceList = document.getElementsByClassName("priceValue");
   let length = priceList.length;
-  // console.log(priceList);
-  
   for(i=0;i<length;i++){
-
   let rate = document.getElementById("price_"+i).getAttribute("value");
   let rateInArray = JSON.parse(rate);
      total = total + rateInArray;
-    //  console.log(total);
      document.getElementById("total").innerHTML = "Rs."+total;
   }
  }
 
-console.log("hello");

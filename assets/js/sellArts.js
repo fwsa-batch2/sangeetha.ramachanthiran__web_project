@@ -30,5 +30,5 @@ function submitHandler() {
 array.push(itemValue);
 let itemsInString = JSON.stringify(array);
 localStorage.setItem("itemS", itemsInString);
-alert("Successfully");
+window.location.href="../pages/buyArts.html"
 }

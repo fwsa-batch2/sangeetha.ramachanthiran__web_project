@@ -48,16 +48,13 @@ function submitHandler(){
    const LoggedUserInString = JSON.stringify(loggedUser);
    localStorage.setItem("LoggedInUser", LoggedUserInString); 
    alert("Success");
-   window.location.href="./../pages/buyArts.html"
+   window.location.href="./../pages/sellArts.html"
 
   }
   else{
-   
     document.getElementById("emailErr").innerText = "Invalid user details";
     return;
   }
-   
-
   console.groupEnd("submitHandler");    
 }
  

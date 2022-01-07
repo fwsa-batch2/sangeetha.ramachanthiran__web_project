@@ -25,5 +25,5 @@
 * if everything is validated,redirect to respective page.
 
 
-### Add to cart 
-* If user want to buy drawings from the website.
+### Sell art 
+* If user want to sell their drawings on the website.
