@@ -7,7 +7,7 @@ function getData(){
     details = detailsInArray;
   }
 }
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
   const inputName = document.getElementById("userName").value;
   const emailId = document.getElementById("emailId").value;
@@ -52,19 +52,16 @@ if (password != confirmPassword) {
 
     let isExist = false;
   if(registerEmail != null){
-    for (i=0; i<registerEmail.length; i++){
+    for (let i=0; i<registerEmail.length; i++){
       const user = registerEmail[i];
       const email = user.EmailId;
     if(myParameter == email){
      isExist =true;
-     
      break;
-    
     }
     else{
       isExist = false;
     }
-    
     }
   }
     console.groupEnd("error");

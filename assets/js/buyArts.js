@@ -3,8 +3,8 @@ let myArray = [];
 function creatingContainer() {
   let getItemSInLocal = localStorage.getItem("itemS");
   let getItemSInArray = JSON.parse(getItemSInLocal);
-  console.log(getItemSInArray);
-  for (i = 0; i < getItemSInArray.length; i++) {
+  
+  for (let i = 0; i < getItemSInArray.length; i++) {
     let imageSrc = getItemSInArray[i].imgSrc;
     let artsName = getItemSInArray[i].artName;
     let artsType = getItemSInArray[i].artType;
@@ -18,7 +18,7 @@ function creatingContainer() {
       artistsName: artistsName,
       artistsPlace: artistsPlace,
       artsPrice: artsPrice,
-    };
+    }
     myArray.push(values); 
   }
   document.getElementById("container").innerHTML = "";
@@ -33,7 +33,7 @@ function creatingContainer() {
           <br>` +myArray[i].artsType +`<br><br><br> <span class="artistName">` +myArray[i].artistsName +`</span>
           <br>` + myArray[i].artistsPlace +`<span class="rate" id="rateOfArts_` +i +`">` +myArray[i].artsPrice +`</span>
           </p>
-        </div>`;
+        </div>`
     document.getElementById("container").innerHTML += containerContains;
   }
 }
@@ -43,16 +43,15 @@ let items = [];
 function addToCart(event) {
   const index = event.target.dataset.index
   const art = myArray[index];
-  let artNo = document.getElementById(event.target.id).getAttribute("art_no");
-  let artsName = myArray[artNo].artsName;
-  let artsPrice = myArray[artNo].artsPrice;
-  let artsImage = myArray[artNo].imageSrc;
+  let artsName = myArray[art].artsName;
+  let artsPrice = myArray[art].artsPrice;
+  let artsImage = myArray[art].imageSrc;
   let values = {
     name: artsName,
     image: artsImage,
     rate: artsPrice,
     quantity: 1,
-  };
+  }
   items.push(values);
   let itemsInString = JSON.stringify(items);
   let itemsInLocal = localStorage.setItem("cartItem", itemsInString);
@@ -68,4 +67,4 @@ function getLocalStorage() {
 }
 
 getLocalStorage();
-
+console.log("hello");

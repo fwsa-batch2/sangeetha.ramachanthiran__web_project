@@ -9,7 +9,7 @@ function getData(){
   }
 getData();
 
-function submitHandler() {
+function submitHandler(event) {
  event.preventDefault();
  const artistName = document.getElementById("artistName").value;
  const place = document.getElementById("place").value;

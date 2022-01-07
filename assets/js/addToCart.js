@@ -8,13 +8,13 @@ function getItem(){
     document.getElementById("cart_container").innerHTML = "";
     for(let i=0;i<getLocalInArray.length;i++){
       const Contains = `<div class="cart_products" id="container_`+i+`">   
-            <div class="removeBtn"><img id="remove_`+i+`" src="../assets/img/remove.png" alt="removeImg" width="75%" height="11px" onclick="removeItem()"></div>    
+            <div class="removeBtn"><img id="remove_`+i+`" src="../assets/img/remove.png" alt="removeImg" width="75%" height="11px" ></div>    
             <div class="image"><img id="images_`+i+`" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
             <div class="artName" > <span id="name_`+i+`">`+getLocalInArray[i].name+`</span></div>
             <div class="rate"> <span  id="rateOfArts_`+i+`" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
-            <button class="button" id="decrease"  value="`+i+`" onclick="decrease()">-</button>
+            <button class="button" id="decrease"  value="`+i+`" onclick="decrease(event)">-</button>
             <input class= "inputBox"  id="input_`+i+`" type="number"  value="0" min= "0"  >
-            <button class="button" id="increase" value="`+i+`" onclick="increase()">+</button> 
+            <button class="button" id="increase" value="`+i+`" onclick="increase(event)">+</button> 
             <div class="priceValue" id="price_`+i+`" onchange="updateCartTotal()"></div> 
            
           </div>`
@@ -26,7 +26,7 @@ function getItem(){
 }
 getItem();
 
-function increase() {
+function increase(event) {
   let targetElement = event.target.value;
   let inputNumber = document.getElementById("input_"+targetElement).value;
   let inputInArray = JSON.parse(inputNumber);
@@ -46,7 +46,7 @@ function increase() {
 updateCartTotal();
 }
 
-function decrease() {
+function decrease(event) {
   let targetValue = event.target.value;
   let inputNumber = document.getElementById("input_"+targetValue).value;
   let inputInArray = JSON.parse(inputNumber);
@@ -68,8 +68,7 @@ function decrease() {
  function updateCartTotal() {
   let total = 0;
   let priceList = document.getElementsByClassName("priceValue");
-  let length = priceList.length;
-  for(i=0;i<length;i++){
+  for(let i=0;i<priceList.length;i++){
   let rate = document.getElementById("price_"+i).getAttribute("value");
   let rateInArray = JSON.parse(rate);
      total = total + rateInArray;

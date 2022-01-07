@@ -30,7 +30,7 @@ function loggedInUserDetails() {
 }
 loggedInUserDetails();
 
-function submitHandler(){
+function submitHandler(event){
     event.preventDefault();
   console.group("submitHandler");
     let userEmail = document.getElementById("emailId").value;
@@ -68,24 +68,19 @@ function myFunction(inputEmail,inputPassword){
 
 
 
-for (i=0; i<registerDetails.length; i++){
+for (let i=0; i<registerDetails.length; i++){
     const userDetail = registerDetails[i];
     const email = userDetail.EmailId;
     const passWord = userDetail.Password;
   if(inputEmail === email && inputPassword === passWord){
    isExist =true;
-   
    break;
-  
   }
   else{
     isExist = false;
   }
-  
   }
-
   console.groupEnd("myFunction");
-
   console.log(isExist);
   return isExist;
 }
