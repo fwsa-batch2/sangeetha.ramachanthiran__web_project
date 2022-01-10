@@ -1,11 +1,52 @@
+#cartPage{
+    background-color: gainsboro;
+    color: black;
+    box-shadow: 10px 10px 20px grey;
+    padding-bottom: 4px;
+    padding-left: 3%;
+    font-size: 2.5vh;
+    width: 100%;
+    height: 35px;
+    padding-top: 6%;
+    z-index: 1;
+}
+.cartBtn{
+    margin-left: 3%; 
+    width: 5%;
+    padding: 7px;
+ }
+ .cartBtn:hover{
+    cursor: pointer;
+    padding: 5px;
+    background-color: #5e5d5d;
+}
+.buy{
+   margin-left: 3%; 
+   width: 5%;
+   padding: 7px;
+   
+}
+.buy:hover{
+    cursor:pointer;
+    padding: 5px;
+    background-color: #5e5d5d;
+}
+.sell{
+    margin-left: 3%; 
+    width: 5%;
+    padding: 7px;
+ }
+ .sell:hover{
+     cursor:pointer;
+     padding: 5px;
+     background-color: #5e5d5d;
+ }
 .addToCart_products{
-    /* background-color: cyan; */
     display: flex; 
     flex-flow: column; 
     margin: 0%;
 }
 .cart_products{
-/* background-color: cadetblue; */
     border-width: 1px;
     border-bottom-style:groove;
     border-bottom-color:  black; 
@@ -22,10 +63,8 @@
     position: absolute;
     flex: none;
     left: 5%;
-    box-shadow: -10px 10px 20px  lightslategrey;
-   
+    box-shadow: -10px 10px 20px  lightslategrey;  
 }
-
 .artName{
    padding-left: 3%;
    padding-top: 5%;
@@ -77,6 +116,11 @@
 }
 .removeBtn{
     float: right;
-    margin-right: 3%;
-    cursor: pointer;  
+    margin-right: 10%;
+    cursor: pointer; 
+    font-size: 2vh;
+     
+}
+.removeBtn:hover{
+    background-color: gray;
 }
