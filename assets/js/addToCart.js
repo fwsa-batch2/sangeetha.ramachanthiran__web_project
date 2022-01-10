@@ -7,8 +7,7 @@ function getItem(){
 
     document.getElementById("cart_container").innerHTML = "";
     for(let i=0;i<getLocalInArray.length;i++){
-      const Contains = `<div class="cart_products" id="container_`+i+`">   
-            <div class="removeBtn"><img id="remove_`+i+`" src="../assets/img/remove.png" alt="removeImg" width="75%" height="11px" ></div>    
+      const Contains = `<div class="cart_products" id="container_`+i+`">     
             <div class="image"><img id="images_`+i+`" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
             <div class="artName" > <span id="name_`+i+`">`+getLocalInArray[i].name+`</span></div>
             <div class="rate"> <span  id="rateOfArts_`+i+`" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
@@ -16,7 +15,9 @@ function getItem(){
             <input class= "inputBox"  id="input_`+i+`" type="number"  value="1" min= "0"  >
             <button class="button" id="increase" value="`+i+`" onclick="increase(event)">+</button> 
             <div class="priceValue" id="price_`+i+`"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
-           
+            <div>
+            <button class="removeBtn" onclick="removeItem()">Remove</button>
+            </div>  
           </div>`
           const totals = `<div class="totalValue" id="total" ></div>`
       document.getElementById("cart_container").innerHTML += Contains;
@@ -76,3 +77,8 @@ function decrease(event) {
   }
  }
 
+ function removeItem() {
+  let getLocal = localStorage.getItem("cartItem");
+  const getLocalInArray = JSON.parse(getLocal); 
+    console.log(getLocalInArray);
+ }
