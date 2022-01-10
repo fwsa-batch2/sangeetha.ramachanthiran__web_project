@@ -3,8 +3,8 @@ let myArray = [];
 function creatingContainer() {
   let getItemSInLocal = localStorage.getItem("itemS");
   let getItemSInArray = JSON.parse(getItemSInLocal);
-  
-  for (let i = 0; i < getItemSInArray.length; i++) {
+  let lengthOfgetItemSInArray = getItemSInArray.length;
+  for (let i = 0; i < lengthOfgetItemSInArray; i++) {
     let imageSrc = getItemSInArray[i].imgSrc;
     let artsName = getItemSInArray[i].artName;
     let artsType = getItemSInArray[i].artType;
