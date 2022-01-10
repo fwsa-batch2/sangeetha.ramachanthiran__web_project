@@ -23,7 +23,8 @@ function creatingContainer() {
     
   }
   document.getElementById("container").innerHTML = "";
-  for (let i = 0; i < myArray.length; i++) {
+  let lengthOfArray = myArray.length;
+  for (let i = 0; i < lengthOfArray; i++) {
     const containerContains =
       `<div class="productContainer">
           <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="10%" height="10%">

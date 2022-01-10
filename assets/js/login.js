@@ -66,9 +66,9 @@ function myFunction(inputEmail,inputPassword){
   const registerDetails = JSON.parse(localStorage.getItem("Detail"));
   let isExist = false;
 
+ let lengthOfRegisterDetails = registerDetails.length;
 
-
-for (let i=0; i<registerDetails.length; i++){
+for (let i=0; i < lengthOfRegisterDetails; i++){
     const userDetail = registerDetails[i];
     const email = userDetail.EmailId;
     const passWord = userDetail.Password;

@@ -48,11 +48,10 @@ if (password != confirmPassword) {
   function error(myParameter){
     console.group("error");
     const registerEmail = JSON.parse(localStorage.getItem("Detail"));
-
-
-    let isExist = false;
+      let lengthOfRegisterEmail = registerEmail.length;
+      let isExist = false;
   if(registerEmail != null){
-    for (let i=0; i<registerEmail.length; i++){
+    for (let i = 0; i < lengthOfRegisterEmail; i++) {
       const user = registerEmail[i];
       const email = user.EmailId;
     if(myParameter == email){
