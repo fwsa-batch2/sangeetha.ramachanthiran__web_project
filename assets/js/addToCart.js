@@ -13,9 +13,9 @@ function getItem(){
             <div class="artName" > <span id="name_`+i+`">`+getLocalInArray[i].name+`</span></div>
             <div class="rate"> <span  id="rateOfArts_`+i+`" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
             <button class="button" id="decrease"  value="`+i+`" onclick="decrease(event)">-</button>
-            <input class= "inputBox"  id="input_`+i+`" type="number"  value="0" min= "0"  >
+            <input class= "inputBox"  id="input_`+i+`" type="number"  value="1" min= "0"  >
             <button class="button" id="increase" value="`+i+`" onclick="increase(event)">+</button> 
-            <div class="priceValue" id="price_`+i+`" onchange="updateCartTotal()"></div> 
+            <div class="priceValue" id="price_`+i+`"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
            
           </div>`
           const totals = `<div class="totalValue" id="total" ></div>`
