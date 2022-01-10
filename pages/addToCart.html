@@ -6,8 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to cart</title>
    <link rel="stylesheet" type="text/css" href="../assets/css/addToCart.css">
+   <link rel="stylesheet" type="text/css" href="../assets/css/homebeauty.css">
 </head>
 <body>
+    <div class="navbar">
+        <div id="text_head">
+          <strong>Smiley World Arts</strong>
+        </div>
+       
+        <a href="../index.html">Home</a>
+      
+        <div class="dropdown">
+          <button class="dropbtn">
+            Arts 
+          </button>
+          <div class="dropdown-content">
+            <a href="./pencilarts.html">Pencil Arts</a>
+            <a href="#">Painting</a>
+            <a href="./sellArts.html">Sell Arts</a> 
+            <a href="#">Buy materials</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">
+            Artists 
+          </button>
+          <div class="dropdown-content">
+            <a href="./pencilArtists.html"> 
+              Pencil Artists</a>
+            <a href="./painter.html">Painter Artists</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Lesson
+          </button>
+          <div class="dropdown-content">
+            <a href="./drawingLesson.html" onclick="clickHandler()"> Drawing Lesson</a>
+            <a href="#">Paintings</a>
+            <a href="./draw.html">Draw</a>
+          </div>
+        </div> 
+        <a href="./login.html">Login</a>
+        <a href="./signup.html">Sign Up</a>
+    </div>
+    <div id="cartPage">
+        <a class="sell" href="../pages/sellArts.html" >Sell arts</a>
+      <a class="buy" href="../pages/buyArts.html">Buy arts</a>  
+    </div>
     
         <div class="addToCart_products" id="cart_container" >
            
