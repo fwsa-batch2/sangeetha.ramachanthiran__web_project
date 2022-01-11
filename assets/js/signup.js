@@ -49,7 +49,8 @@ if (password != confirmPassword) {
     console.group("error");
     const registerEmail = JSON.parse(localStorage.getItem("Detail"));
       let lengthOfRegisterEmail = registerEmail.length;
-      let isExist = false;
+      let isExist;
+      console.log(isExist);
   if(registerEmail != null){
     for (let i = 0; i < lengthOfRegisterEmail; i++) {
       const user = registerEmail[i];
@@ -59,7 +60,7 @@ if (password != confirmPassword) {
      break;
     }
     else{
-      isExist;
+      isExist = false;
     }
     }
   }

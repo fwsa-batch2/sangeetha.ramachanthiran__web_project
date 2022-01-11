@@ -64,7 +64,7 @@ function myFunction(inputEmail,inputPassword){
  console.group("myFunction");
 
   const registerDetails = JSON.parse(localStorage.getItem("Detail"));
-  let isExist = false;
+  let isExist;
 
  let lengthOfRegisterDetails = registerDetails.length;
 
@@ -77,8 +77,7 @@ for (let i=0; i < lengthOfRegisterDetails; i++){
    break;
   }
   else{
-    isExist;
-    console.log(isExist);
+    isExist = false;
   }
   }
   console.groupEnd("myFunction");
