@@ -77,7 +77,8 @@ for (let i=0; i < lengthOfRegisterDetails; i++){
    break;
   }
   else{
-    isExist = false;
+    isExist;
+    console.log(isExist);
   }
   }
   console.groupEnd("myFunction");

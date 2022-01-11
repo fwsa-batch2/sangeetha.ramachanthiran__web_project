@@ -82,5 +82,6 @@ function decrease(event) {
   const getLocalInArray = JSON.parse(getLocal); 
   console.log(getLocalInArray);
   let targetName = event.target.value;
+  console.log(targetName);
   
  }
