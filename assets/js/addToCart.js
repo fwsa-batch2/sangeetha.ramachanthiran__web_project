@@ -16,7 +16,7 @@ function getItem(){
             <button class="button" id="increase" value="`+i+`" onclick="increase(event)">+</button> 
             <div class="priceValue" id="price_`+i+`"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
             <div>
-            <button class="removeBtn" onclick="removeItem()">Remove</button>
+            <button class="removeBtn" onclick="removeItem(event)">Remove</button>
             </div>  
           </div>`
           const totals = `<div class="totalValue" id="total" ></div>`
@@ -77,7 +77,7 @@ function decrease(event) {
   }
  }
 
- function removeItem() {
+ function removeItem(event) {
   let getLocal = localStorage.getItem("cartItem");
   const getLocalInArray = JSON.parse(getLocal); 
   console.log(getLocalInArray);

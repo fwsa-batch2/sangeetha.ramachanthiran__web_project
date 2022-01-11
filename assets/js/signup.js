@@ -59,7 +59,7 @@ if (password != confirmPassword) {
      break;
     }
     else{
-      isExist = false;
+      isExist;
     }
     }
   }
