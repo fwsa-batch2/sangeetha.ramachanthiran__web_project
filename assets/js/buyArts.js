@@ -58,6 +58,7 @@ function addToCart(event) {
   items.push(values);
   let itemsInString = JSON.stringify(items);
   let itemsInLocal = localStorage.setItem("cartItem", itemsInString);
+  console.log(itemsInLocal);
   document.getElementById("alerts").innerHTML = "Successfully carted";
 }
 
@@ -69,8 +70,6 @@ function getLocalStorage() {
   }
   
 }
-
 getLocalStorage();
-
 
 console.log("hello");

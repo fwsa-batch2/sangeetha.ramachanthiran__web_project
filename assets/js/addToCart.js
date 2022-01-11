@@ -80,5 +80,7 @@ function decrease(event) {
  function removeItem() {
   let getLocal = localStorage.getItem("cartItem");
   const getLocalInArray = JSON.parse(getLocal); 
-    console.log(getLocalInArray);
+  console.log(getLocalInArray);
+  let targetName = event.target.value;
+  
  }
