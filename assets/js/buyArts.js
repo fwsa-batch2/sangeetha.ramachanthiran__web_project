@@ -60,7 +60,7 @@ function addToCart(event) {
   let itemsInString = JSON.stringify(items);
   let itemsInLocal = localStorage.setItem("cartItem", itemsInString);
   console.log(itemsInLocal);
-  // document.getElementById("alerts").innerHTML = "Successfully carted";
+  
 }
 
 function getLocalStorage() {

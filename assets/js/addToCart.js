@@ -6,7 +6,7 @@ function getItem(){
     console.log(getLocalInArray);
     
     document.getElementById("cart_container").innerHTML = "";
-    let total =0;
+    
     for(let i=0;i<getLocalInArray.length;i++){
       const Contains = `<div class="cart_products" id="container_`+i+`">     
             <div class="image"><img id="images_${i}" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
@@ -23,7 +23,7 @@ function getItem(){
           const totals = `<div class="totalValue" id="total" ></div>`
       document.getElementById("cart_container").innerHTML += Contains;
       document.getElementById("totalRate").innerHTML += totals;
-    //  console.log(`${i}`);
+    
      
     }
 }
@@ -40,7 +40,7 @@ function increase(event) {
   
   let artPrice = document.getElementById("rateOfArts_"+targetElement).getAttribute("value");
   let amount = increaseNum*artPrice;
-  // let target = event.target.value;
+ 
   
   if(amount != null){
     document.getElementById("price_"+targetElement).innerHTML = "Rs."+amount;
