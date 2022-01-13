@@ -4,24 +4,26 @@ function getItem(){
     const itemsInLocal = localStorage.getItem("cartItem");  
     const getLocalInArray = JSON.parse(itemsInLocal); 
     console.log(getLocalInArray);
-
+    
     document.getElementById("cart_container").innerHTML = "";
+    let total =0;
     for(let i=0;i<getLocalInArray.length;i++){
       const Contains = `<div class="cart_products" id="container_`+i+`">     
-            <div class="image"><img id="images_`+i+`" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
-            <div class="artName" > <span id="name_`+i+`">`+getLocalInArray[i].name+`</span></div>
-            <div class="rate"> <span  id="rateOfArts_`+i+`" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
-            <button class="button" id="decrease"  value="`+i+`" onclick="decrease(event)">-</button>
-            <input class= "inputBox"  id="input_`+i+`" type="number"  value="1" min= "0"  >
-            <button class="button" id="increase" value="`+i+`" onclick="increase(event)">+</button> 
-            <div class="priceValue" id="price_`+i+`"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
+            <div class="image"><img id="images_${i}" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
+            <div class="artName" > <span id="name_${i}">`+getLocalInArray[i].name+`</span></div>
+            <div class="rate"> <span  id="rateOfArts_${i}" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
+            <button class="button" id="decrease"  value="${i}" onclick="decrease(event)">-</button>
+            <input class= "inputBox"  id="input_${i}" type="number"  value="1" min= "0"  >
+            <button class="button" id="increase" value="${i}" onclick="increase(event)">+</button> 
+            <div class="priceValue" id="price_${i}"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
             <div>
-            <button class="removeBtn" onclick="removeItem(event)">Remove</button>
+            <button class="removeBtn" id="remove" onclick="removeItem(${i})" value="${i}">Remove</button>
             </div>  
           </div>`
           const totals = `<div class="totalValue" id="total" ></div>`
       document.getElementById("cart_container").innerHTML += Contains;
       document.getElementById("totalRate").innerHTML += totals;
+    //  console.log(`${i}`);
      
     }
 }
@@ -35,13 +37,14 @@ function increase(event) {
   if(increaseNum != null) {
     document.getElementById("input_"+targetElement).value = increaseNum;
   }
+  
   let artPrice = document.getElementById("rateOfArts_"+targetElement).getAttribute("value");
   let amount = increaseNum*artPrice;
-  let target = event.target.value;
+  // let target = event.target.value;
   
   if(amount != null){
-    document.getElementById("price_"+target).innerHTML = "Rs."+amount;
-    document.getElementById("price_"+target).setAttribute("value",amount);
+    document.getElementById("price_"+targetElement).innerHTML = "Rs."+amount;
+    document.getElementById("price_"+targetElement).setAttribute("value",amount);
   }
   
 updateCartTotal();
@@ -51,7 +54,7 @@ function decrease(event) {
   let targetValue = event.target.value;
   let inputNumber = document.getElementById("input_"+targetValue).value;
   let inputInArray = JSON.parse(inputNumber);
-  let decreaseNum = inputNumber>0 ? inputInArray-1 : 0;
+  let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
   if(decreaseNum != null) {
     document.getElementById("input_"+targetValue).value = decreaseNum;
   }
@@ -66,7 +69,7 @@ function decrease(event) {
   updateCartTotal();
 }
 
- function updateCartTotal() {
+function updateCartTotal() {
   let total = 0;
   let priceList = document.getElementsByClassName("priceValue");
   for(let i=0;i<priceList.length;i++){
@@ -75,13 +78,21 @@ function decrease(event) {
      total = total + rateInArray;
      document.getElementById("total").innerHTML = "Rs."+total;
   }
- }
-
- function removeItem(event) {
-  let getLocal = localStorage.getItem("cartItem");
-  const getLocalInArray = JSON.parse(getLocal); 
-  console.log(getLocalInArray);
-  let targetName = event.target.value;
-  console.log(targetName);
   
  }
+
+ updateCartTotal();
+function removeItem(index) {
+
+  let localName = localStorage.getItem("cartItem");
+  const localInArray = JSON.parse(localName); 
+
+  localInArray.splice(index,1);
+  console.log(localInArray);
+  let stringify = JSON.stringify(localInArray);
+  localStorage.setItem("cartItem",stringify);
+
+  getItem();
+
+ }
+
