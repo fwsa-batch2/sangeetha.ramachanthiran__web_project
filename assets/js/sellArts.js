@@ -1,4 +1,5 @@
-let array =[];
+let array =[{imageSrc:"../assets/img/smile_headset.jpeg",artsName: "Headset",artsType: "Pencil drawing",artistsName: "Ismail",artistsPlace: "Thoothukudi",artsPrice: 500},
+{imageSrc:"../assets/img/smile_subway.jpg",artsName: "Subway Surfers",artsType: "Pencil drawing",artistsName: "Ismail",artistsPlace: "Thoothukudi",artsPrice: 500},];
 function getData(){
  
     let getLocalStorage =  localStorage.getItem("itemS");
