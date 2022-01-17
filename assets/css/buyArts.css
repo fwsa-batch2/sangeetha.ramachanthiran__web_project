@@ -4,11 +4,9 @@ body{
 }
 
 .products{
-   padding-top: 5%;
+    padding-top: 5%;
     display: flex;
-    flex-flow: row wrap;
-    
-    
+    flex-flow: row wrap;    
 }
 .productContainer{
     background-color: #dfdddd;
@@ -29,8 +27,6 @@ body{
 }
 .addedToCart{
     text-align: center;
-    /* margin-top: 5%;
-    margin-left: 50%; */
     margin: 25%;
     font-size: 2vh;
 }
@@ -89,6 +85,13 @@ p{
     padding: 5px;
     background-color: #5e5d5d;
 }
+#cartNumbers{
+    margin-left: 10.5%;
+    color: black;
+    margin-right: 91%;
+    padding: 0%;
+    margin-top: 0%;
+}
 .wishlist{
     margin-left: 70%;
     margin-top: 5%;
@@ -107,12 +110,12 @@ p{
     padding-top: 5%;
 }
 .addToCart{
-cursor: pointer;
+    cursor: pointer;
 }
 #link{
     text-align: center;
-margin-left: 0%;
-font-size: 2vh;
-margin-top: 2%;
-position: fixed;
+    margin-left: 0%;
+    font-size: 2vh;
+    margin-top: 2%;
+    position: fixed;
 }

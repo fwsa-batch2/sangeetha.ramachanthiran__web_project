@@ -27,7 +27,7 @@
 
 ### Sell art 
 * User wants to login first before enter into this page.If user want to sell their drawings from the website.All the inputs are mandatory to sell the user drawings.
-Drawing price should must above the Rs 100. Collect the details and show the drawing product in buy arts page.
+Drawing price should must above the Rs 100. User cannot sell the same drawing if the drawing already in buy arts page error message will show. Collect the details and show the drawing product in buy arts page.
 
 ### Add to cart
 * If user want to buy the drawing from buy art page from the buy art button in sell art page.There click the add to cart image button of your wanted drawing and the drawing product was added on the cart page.  

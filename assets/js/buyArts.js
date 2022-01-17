@@ -60,7 +60,12 @@ function addToCart(event) {
   let itemsInString = JSON.stringify(items);
   let itemsInLocal = localStorage.setItem("cartItem", itemsInString);
   console.log(itemsInLocal);
-  
+  let targetValue = event.target.value;
+  if(document. getElementById("addToCart_"+targetValue). click == true) {
+    let add = document.getElementById("cartNumbers").innerHTML + 1;
+    console.log(add);
+  }
+
 }
 
 function getLocalStorage() {
