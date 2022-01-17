@@ -28,38 +28,38 @@ function submitHandler(event) {
     "imgSrc" : imgSrc
 }
 
-// let imageLink = existImageLink(imgSrc);
-//   console.log(imageLink);
-//   if(imageLink){
-//     alert("This drawing already added");
-//     return;
-//   }
+let imageLink = existImageLink(imgSrc);
+  console.log(imageLink);
+  if(imageLink){
+    alert("This drawing already added");
+    return;
+  }
 
 array.push(itemValue);
 let itemsInString = JSON.stringify(array);
 localStorage.setItem("itemS", itemsInString);
 window.location.href="../pages/buyArts.html"
 }
-// function existImageLink(imageSource) {
-//   console.group("existImageLink");
-//   const userProducts = JSON.parse(localStorage.getItem("itemS"));
-//     let lengthOfUserProduct = userProducts.length;
-//     let isExist;
-//     console.log(isExist);
-// if(userProducts != null){
-//   for (let i = 0; i < lengthOfUserProduct; i++) {
-//     const userItem = userProducts[i];
-//     const srcOfImage = userItem.imgSrc;
-//   if(imageSource == srcOfImage){
-//    isExist =true;
-//    break;
-//   }
-//   else{
-//     isExist = false;
-//   }
-//   }
-// }
-//   console.groupEnd("existImageLink");
-//   return isExist;
+function existImageLink(imageSource) {
+  console.group("existImageLink");
+  const userProducts = JSON.parse(localStorage.getItem("itemS"));
+    let lengthOfUserProduct = userProducts.length;
+    let isExist;
+    console.log(isExist);
+if(userProducts != null){
+  for (let i = 0; i < lengthOfUserProduct; i++) {
+    const userItem = userProducts[i];
+    const srcOfImage = userItem.imgSrc;
+  if(imageSource == srcOfImage){
+   isExist =true;
+   break;
+  }
+  else{
+    isExist = false;
+  }
+  }
+}
+  console.groupEnd("existImageLink");
+  return isExist;
   
-// }
+}
