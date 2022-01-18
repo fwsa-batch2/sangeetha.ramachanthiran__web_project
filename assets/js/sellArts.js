@@ -43,7 +43,7 @@ window.location.href="../pages/buyArts.html"
 function existImageLink(imageSource) {
   console.group("existImageLink");
   const userProducts = JSON.parse(localStorage.getItem("itemS"));
-    let lengthOfUserProduct = userProducts.length;
+    let lengthOfUserProduct = userProducts != null ? userProducts.length : 0;
     let isExist;
     console.log(isExist);
 if(userProducts != null){

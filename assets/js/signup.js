@@ -49,7 +49,7 @@ if (password != confirmPassword) {
     console.group("error");
     let getItemForEmail = localStorage.getItem("Detail");
     let registerEmail = JSON.parse(getItemForEmail);
-    let lengthOfRegisterEmail = registerEmail != null ? registerEmail.length : 0;
+    let lengthOfRegisterEmail = registerEmail != null ? registerEmail.length : 0; 
     let isExist;
     console.log(isExist);
   
