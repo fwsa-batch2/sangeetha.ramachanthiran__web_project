@@ -1,5 +1,14 @@
-let myArray = [{imageSrc:"../assets/img/smile_headset.jpeg",artsName: "Headset",artsType: "Pencil drawing",artistsName: "Ismail",artistsPlace: "Thoothukudi",artsPrice: 500},
-{imageSrc:"../assets/img/smile_subway.jpg",artsName: "Subway Surfers",artsType: "Pencil drawing",artistsName: "Ismail",artistsPlace: "Thoothukudi",artsPrice: 500},];
+let myArray = [{imageSrc:"../assets/img/smile_headset.jpeg",
+    artsName: "Headset",artsType: "Pencil drawing",
+    artistsName: "Ismail",
+    artistsPlace: "Thoothukudi",
+    artsPrice: 500},
+    {imageSrc:"../assets/img/smile_subway.jpg",
+    artsName: "Subway Surfers",
+    artsType: "Pencil drawing",
+    artistsName: "Ismail",
+    artistsPlace: "Thoothukudi",
+    artsPrice: 500},];
 
 function creatingContainer() {
   let getItemSInLocal = localStorage.getItem("itemS");
@@ -20,29 +29,29 @@ function creatingContainer() {
       artistsPlace: artistsPlace,
       artsPrice: artsPrice,
     }
-    myArray.push(values); 
-    
+    myArray.push(values);  
   }
   document.getElementById("container").innerHTML = "";
   let lengthOfArray = myArray.length;
   for (let i = 0; i < lengthOfArray; i++) {
     const containerContains =
       `<div class="productContainer">
-          <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="10%" height="10%">
-          <img class="addToCart" id="addToCart_${i}" value="${i}" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" data-index="${i}" onclick="{addToCart(event)}">
-          <img class="image" id="images_${i}" src="` +myArray[i].imageSrc +` " alt="drawing" width="60%" height="200">
-          <p class="Content">
+        <img class="wishlist" src="../assets/img/heart.png" alt="wishlist" width="10%" height="10%">
+        <img class="addToCart" id="addToCart_${i}" value="${i}" src="../assets/img/addToCart.png" alt="addToCart" width="15%" height="11%" data-index="${i}" onclick="{addToCart(event)}">
+        <img class="image" id="images_${i}" src="` +myArray[i].imageSrc +` " alt="drawing" width="60%" height="200">
+        <p class="Content">
           <span class="artName" id="name_${i}">` +myArray[i].artsName +`</span>
-          <br>` +myArray[i].artsType +`<br><br><br> <span class="artistName">` +myArray[i].artistsName +`</span>
+          <br>` +myArray[i].artsType +`<br><br><br><span class="artistName">` +myArray[i].artistsName +`</span>
           <br>` + myArray[i].artistsPlace +`<span class="rate" id="rateOfArts_${i}">` +myArray[i].artsPrice +`</span>
-          </p>
-        </div>`
+        </p>
+      </div>`
     document.getElementById("container").innerHTML += containerContains;
   }
 }
 creatingContainer();
 
 let items = [];
+
 function addToCart(event) {
   let index = event.target.dataset.index;
   let art = myArray[index];
@@ -67,9 +76,7 @@ function getLocalStorage() {
   const itemsInArray = JSON.parse(getItemsFromLocal);
   if (itemsInArray != null) {
     items = itemsInArray;
-  }
-  
+  }  
 }
 getLocalStorage();
-
 console.log("hello");

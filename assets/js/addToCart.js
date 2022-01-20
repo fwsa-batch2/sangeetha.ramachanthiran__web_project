@@ -1,12 +1,9 @@
-
 function getItem(){ 
-
     const itemsInLocal = localStorage.getItem("cartItem");  
     const getLocalInArray = JSON.parse(itemsInLocal); 
     console.log(getLocalInArray);
-    
     document.getElementById("cart_container").innerHTML = "";
-    
+
     for(let i=0;i<getLocalInArray.length;i++){
       const Contains = `<div class="cart_products" id="container_`+i+`">     
             <div class="image"><img id="images_${i}" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
@@ -22,9 +19,7 @@ function getItem(){
           </div>`
           const totals = `<div class="totalValue" id="total" ></div>`
       document.getElementById("cart_container").innerHTML += Contains;
-      document.getElementById("totalRate").innerHTML += totals;
-    
-     
+      document.getElementById("totalRate").innerHTML += totals; 
     }
 }
 getItem();
@@ -37,16 +32,12 @@ function increase(event) {
   if(increaseNum != null) {
     document.getElementById("input_"+targetElement).value = increaseNum;
   }
-  
   let artPrice = document.getElementById("rateOfArts_"+targetElement).getAttribute("value");
   let amount = increaseNum*artPrice;
- 
-  
   if(amount != null){
     document.getElementById("price_"+targetElement).innerHTML = "Rs."+amount;
     document.getElementById("price_"+targetElement).setAttribute("value",amount);
-  }
-  
+  }  
 updateCartTotal();
 }
 
@@ -61,7 +52,6 @@ function decrease(event) {
   let artPrice = document.getElementById("rateOfArts_"+targetValue).getAttribute("value");
   let amount = decreaseNum*artPrice;
   let target = event.target.value;
-  
   if(amount != null){
     document.getElementById("price_"+target).innerHTML = "Rs."+amount;
     document.getElementById("price_"+target).setAttribute("value",amount);
@@ -78,21 +68,17 @@ function updateCartTotal() {
      total = total + rateInArray;
      document.getElementById("total").innerHTML = "Rs."+total;
   }
-  
  }
 
  updateCartTotal();
-function removeItem(index) {
 
+function removeItem(index) {
   let localName = localStorage.getItem("cartItem");
   const localInArray = JSON.parse(localName); 
-
   localInArray.splice(index,1);
   console.log(localInArray);
   let stringify = JSON.stringify(localInArray);
   localStorage.setItem("cartItem",stringify);
-
   getItem();
-
  }
 

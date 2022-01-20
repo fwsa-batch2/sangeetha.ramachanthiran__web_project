@@ -1,6 +1,5 @@
 let details = [];
 function getData(){
- 
   const getLocal =  localStorage.getItem("Detail");
   const detailsInArray = JSON.parse(getLocal);
   if(detailsInArray != null){
@@ -13,20 +12,16 @@ function submitHandler(event) {
   const emailId = document.getElementById("emailId").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm").value;
-  
-const values = {
+  const values = {
     Name : inputName,
     EmailId : emailId,
     Password : password,
     Confirm_Password : confirmPassword
-}
-
-if (password != confirmPassword) {
-
+  }
+  if (password != confirmPassword) {
   document.getElementById("errorMsg").innerHTML = "This is invalid";
-
   return;
-}
+  }
   let myError = error(emailId);
   console.log(myError);
   if(myError){
@@ -36,23 +31,18 @@ if (password != confirmPassword) {
   details.push(values);
   const detailsInString = JSON.stringify(details);
   localStorage.setItem("Detail", detailsInString); 
-  
-  
   alert("Successfully Registered")
   window.location.href="./../index.html"
-  
-  
   }
-  
   getData();
-  function error(myParameter){
-    console.group("error");
-    let getItemForEmail = localStorage.getItem("Detail");
-    let registerEmail = JSON.parse(getItemForEmail);
-    let lengthOfRegisterEmail = registerEmail != null ? registerEmail.length : 0; 
-    let isExist;
-    console.log(isExist);
-  
+
+function error(myParameter){
+  console.group("error");
+  let getItemForEmail = localStorage.getItem("Detail");
+  let registerEmail = JSON.parse(getItemForEmail);
+  let lengthOfRegisterEmail = registerEmail != null ? registerEmail.length : 0; 
+  let isExist;
+  console.log(isExist);
   if(registerEmail != null) {
     for (let i = 0; i < lengthOfRegisterEmail; i++) {
       const user = registerEmail[i];
@@ -65,9 +55,8 @@ if (password != confirmPassword) {
       isExist = false;
     }
     }
-  }
-    console.groupEnd("error");
-    return isExist;
-    
-  }
+}
+  console.groupEnd("error");
+  return isExist;
+}
   
