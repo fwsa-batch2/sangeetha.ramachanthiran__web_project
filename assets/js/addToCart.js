@@ -17,7 +17,7 @@ function getItem(){
             <button class="removeBtn" id="remove" onclick="removeItem(${i})" value="${i}">Remove</button>
             </div>  
           </div>`
-          const totals = `<div class="totalValue" id="total" ></div>`
+          const totals = `<div class="totalValue" id="total"></div>`
       document.getElementById("cart_container").innerHTML += Contains;
       document.getElementById("totalRate").innerHTML += totals; 
     }

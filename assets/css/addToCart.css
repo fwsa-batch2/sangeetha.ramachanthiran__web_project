@@ -110,17 +110,26 @@
    float: right;
    margin-top: 5%;
 }
-#totalRate{
-    border-bottom-color: gray;
-    border-bottom-style: groove;
-}
+
 .removeBtn{
     float: right;
     margin-right: 10%;
     cursor: pointer; 
-    font-size: 2vh;
-     
+    font-size: 2vh;     
 }
 .removeBtn:hover{
     background-color: gray;
+}
+
+#continueBtn {
+    margin-top: 5%;
+    margin-left: 65%;
+    width: 5%;
+    font-size: 2vh;
+    border-color: gray;
+    border-style: groove;
+    border-width: 3px;
+}
+#continueBtn:hover{
+    background-color: rgb(165, 162, 162);
 }
