@@ -84,13 +84,18 @@
    margin-left: 25%;
    margin-top: 5%;
 }
-
-#decrease{
-    margin-left: 50%;
+.insButton{
+    background-color: lightgray;
+    font-size: 2vh;
 }
+.insButton:hover{
+    background-color: grey;
+}
+
 .button{
     background-color: lightgray;
     font-size: 2vh;
+    margin-left: 50%;
 }
 .button:hover{
     background-color: grey;
