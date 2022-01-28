@@ -11,7 +11,7 @@ let myArray = [{imageSrc:"../assets/img/smile_headset.jpeg",
     artsPrice: 500},];
 
 function creatingContainer() {
-  let getItemSInLocal = localStorage.getItem("itemS");
+  let getItemSInLocal = localStorage.getItem("ITEMS");
   let getItemSInArray = JSON.parse(getItemSInLocal);
   let lengthOfgetItemSInArray = getItemSInArray.length;
   for (let i = 0; i < lengthOfgetItemSInArray; i++) {
@@ -67,12 +67,12 @@ function addToCart(event) {
   }
   items.push(values);
   let itemsInString = JSON.stringify(items);
-  let itemsInLocal = localStorage.setItem("cartItem", itemsInString);
+  let itemsInLocal = localStorage.setItem("CARTITEM", itemsInString);
   console.log(itemsInLocal);
 }
 
 function getLocalStorage() {
-  let getItemsFromLocal = localStorage.getItem("cartItem");
+  let getItemsFromLocal = localStorage.getItem("CARTITEM");
   const itemsInArray = JSON.parse(getItemsFromLocal);
   if (itemsInArray != null) {
     items = itemsInArray;

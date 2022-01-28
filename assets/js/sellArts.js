@@ -1,13 +1,15 @@
 let array =[];
 
-function getData(){
-  let getLocalStorage =  localStorage.getItem("itemS");
+function getValueFromLocal() {
+  //get localStorage value
+  let getLocalStorage =  localStorage.getItem("ITEMS");
   let itemSInArray = JSON.parse(getLocalStorage);
+  //condition for replacing value
   if(itemSInArray != null){
     array = itemSInArray;
   }
 }
-getData();
+getValueFromLocal();
 
 function submitHandler(event) {
   event.preventDefault();
@@ -33,13 +35,13 @@ function submitHandler(event) {
   }
   array.push(itemValue);
   let itemsInString = JSON.stringify(array);
-  localStorage.setItem("itemS", itemsInString);
+  localStorage.setItem("ITEMS", itemsInString);
   window.location.href="../pages/buyArts.html"
 }
 
 function existImageLink(imageSource) {
   console.group("existImageLink");
-  const userProducts = JSON.parse(localStorage.getItem("itemS"));
+  const userProducts = JSON.parse(localStorage.getItem("ITEMS"));
     let lengthOfUserProduct = userProducts != null ? userProducts.length : 0;
     let isExist;
     console.log(isExist);

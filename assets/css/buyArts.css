@@ -111,10 +111,4 @@ p{
 .addToCart{
     cursor: pointer;
 }
-#link{
-    text-align: center;
-    margin-left: 0%;
-    font-size: 2vh;
-    margin-top: 2%;
-    position: fixed;
-}
+

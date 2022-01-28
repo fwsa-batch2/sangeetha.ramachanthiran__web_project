@@ -1,21 +1,22 @@
 let detailList =[];
 let loggedUser = [];
 
-function onPageLoad(){
-  console.group("onPageLoad")
-  const userDetailsInArray = JSON.parse(localStorage.getItem("Detail"));
-  if(userDetailsInArray !== null){
+function onPageLoad() {
+  console.group("onPageLoad");
+  const userDetailsInArray = JSON.parse(localStorage.getItem("DETAIL"));
+  // for replacing value 
+  if(userDetailsInArray !== null) {
     detailList = userDetailsInArray;
   }
-  console.groupEnd("onPageLoad")    
-  console.log(detailList);
+  console.groupEnd("onPageLoad");
 }
 onPageLoad();  
 
 function loggedInUserDetails() {
   console.group("loggedInUserDetails");
   const loggedUserInArray= JSON.parse(localStorage.getItem("LoggedInUser"));
-  if(loggedUserInArray !== null){
+  // for replacing value
+  if(loggedUserInArray !== null) {
     loggedUser = loggedUserInArray;   
   }
   console.groupEnd("loggedInUserDetails");
@@ -25,15 +26,16 @@ loggedInUserDetails();
 function submitHandler(event){
   event.preventDefault();
   console.group("submitHandler");
+  //1. get input from user
   let userEmail = document.getElementById("emailId").value;
-  console.log(userEmail);
   let Cpassword = document.getElementById("password").value;
-  console.log(Cpassword);
+  //2. validation
+
+  //3. for checking if the already register
   let functionName = myFunction(userEmail,Cpassword);
-  console.log(functionName);
   if(functionName){
     loggedUser.push(userEmail);
-    console.log(loggedUser);
+    //4. set the values in localStorage
     const LoggedUserInString = JSON.stringify(loggedUser);
     localStorage.setItem("LoggedInUser", LoggedUserInString); 
     alert("Success");
@@ -47,13 +49,16 @@ function submitHandler(event){
 }
 function myFunction(inputEmail,inputPassword) {
   console.group("myFunction");
-  const registerDetails = JSON.parse(localStorage.getItem("Detail"));
+  // Email and password whether its register
+  const registerDetails = JSON.parse(localStorage.getItem("DETAIL"));
   let isExist;
   let lengthOfRegisterDetails = registerDetails.length;
-  for (let i=0; i < lengthOfRegisterDetails; i++){
+  //get email id and password from the localStorage
+  for(let i=0; i < lengthOfRegisterDetails; i++) {
     const userDetail = registerDetails[i];
     const email = userDetail.EmailId;
     const passWord = userDetail.Password;
+    //condition for email & password validation
     if(inputEmail === email && inputPassword === passWord){
       isExist =true;
       break;

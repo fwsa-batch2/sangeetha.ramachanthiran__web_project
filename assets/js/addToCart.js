@@ -1,5 +1,5 @@
 function getItem(){ 
-    const itemsInLocal = localStorage.getItem("cartItem");  
+    const itemsInLocal = localStorage.getItem("CARTITEM");  
     const getLocalInArray = JSON.parse(itemsInLocal); 
     document.getElementById("cart_container").innerHTML = "";
 
@@ -31,7 +31,7 @@ function increase(event) {
   //2. validation
 
   //3. increase quantity
-  let qtyInArray = parseInt(inputNumber); //JSON.parse(inputNumber); //wrong
+  let qtyInArray = parseInt(inputNumber); 
   let increaseQty = qtyInArray+1;
   if(increaseQty != null) {
     //4. update the qty
@@ -57,19 +57,21 @@ function decrease(event) {
   //2. validation
   let inputInArray = parseInt(inputNumber);
 
-  //3. disbled the decrease button.
+  
+  
+  //3. decrease quantity
+  let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
+  //4. disbled the decrease button.
   if(inputInArray === 1) {
     document.getElementById("decrease_"+targetValue).disabled = true;
   }
-  //4. decrease quantity
-  let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
   if(decreaseNum != null) {
-    //4. update the quantity
+    //5. update the quantity
     document.getElementById("input_"+targetValue).value = decreaseNum;
   }
-  //5. price of the product
+  //6. price of the product
   let artPrice = document.getElementById("rateOfArts_"+targetValue).getAttribute("value");
-  //6. Calculate total amount
+  //7. Calculate total amount
   let amount = decreaseNum*artPrice;
   let target = event.target.value;
   if(amount != null){
@@ -97,12 +99,12 @@ function updateCartTotal() {
 
 function removeItem(index) {
   //1. get value from the local storage
-  let localName = localStorage.getItem("cartItem");
+  let localName = localStorage.getItem("CARTITEM");
   const localInArray = JSON.parse(localName); 
   //2. delete the product from localstorage and set the rest product.
   localInArray.splice(index,1);
   let stringify = JSON.stringify(localInArray);
-  localStorage.setItem("cartItem",stringify);
+  localStorage.setItem("CARTITEM",stringify);
   //CartServcie.removeItem(index);
   getItem();
  }
