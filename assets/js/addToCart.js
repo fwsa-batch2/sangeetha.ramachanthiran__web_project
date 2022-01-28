@@ -27,19 +27,17 @@ function increase(event) {
   //1. get quantity
   let targetElement = event.target.value;
   let inputNumber = document.getElementById("input_"+targetElement).value;
-
   //2. validation
 
   //3. increase quantity
   let qtyInArray = parseInt(inputNumber); 
   let increaseQty = qtyInArray+1;
   if(increaseQty != null) {
-    //4. update the qty
+  //4. update the qty
     document.getElementById("input_"+targetElement).value = increaseQty;
   }
   //5. price of the product
   let artPrice = document.getElementById("rateOfArts_"+targetElement).getAttribute("value");
-
   //6. Calculate total amount
   let amount = increaseQty*artPrice;
   if(amount != null){
@@ -53,12 +51,8 @@ function decrease(event) {
   //1. get quantity
   let targetValue = event.target.value;
   let inputNumber = document.getElementById("input_"+targetValue).value;
-
   //2. validation
   let inputInArray = parseInt(inputNumber);
-
-  
-  
   //3. decrease quantity
   let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
   //4. disbled the decrease button.

@@ -11,6 +11,7 @@ let myArray = [{imageSrc:"../assets/img/smile_headset.jpeg",
     artsPrice: 500},];
 
 function creatingContainer() {
+  // get product details from localStorage.
   let getItemSInLocal = localStorage.getItem("ITEMS");
   let getItemSInArray = JSON.parse(getItemSInLocal);
   let lengthOfgetItemSInArray = getItemSInArray.length;
@@ -53,9 +54,10 @@ creatingContainer();
 let items = [];
 
 function addToCart(event) {
+  // get dataSet value using event.target
   let index = event.target.dataset.index;
   let art = myArray[index];
-  console.log(art);
+  // get the values from the array
   let artsName = art.artsName;
   let artsPrice = art.artsPrice;
   let artsImage = art.imageSrc;
@@ -65,18 +67,19 @@ function addToCart(event) {
     rate: artsPrice,
     quantity: 1,
   }
+  // push the valuesin array and set in localStorage
   items.push(values);
   let itemsInString = JSON.stringify(items);
   let itemsInLocal = localStorage.setItem("CARTITEM", itemsInString);
-  console.log(itemsInLocal);
 }
 
 function getLocalStorage() {
   let getItemsFromLocal = localStorage.getItem("CARTITEM");
   const itemsInArray = JSON.parse(getItemsFromLocal);
+  // condition for replacing values
   if (itemsInArray != null) {
     items = itemsInArray;
   }  
 }
 getLocalStorage();
-console.log("hello");
+
