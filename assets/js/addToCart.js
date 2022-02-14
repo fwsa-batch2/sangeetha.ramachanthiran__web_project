@@ -8,10 +8,12 @@ function getItem(){
             <div class="image"><img id="images_${i}" src="`+getLocalInArray[i].image+`" alt="Images" width="100%" height="200"></div>
             <div class="artName" > <span id="name_${i}">`+getLocalInArray[i].name+`</span></div>
             <div class="rate"> <span  id="rateOfArts_${i}" value ="`+getLocalInArray[i].rate+`">Rs.`+getLocalInArray[i].rate+`</span></div>            
-            <button class="button" id="decrease_${i}"  value="${i}" onclick="decrease(event)">-</button>
-            <input class= "inputBox"  id="input_${i}" type="number"  value="1" min= "0"  >
-            <button class="insButton" id="increase" value="${i}" onclick="increase(event)">+</button> 
-            <div class="priceValue" id="price_${i}"  onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
+            <div class="qnty">
+              <button class="button" id="decrease_${i}"  value="${i}" onclick="decrease(event)">-</button>
+              <p class= "inputBox"  id="input_${i}" type="number"  value="1" min= "0">1</p>
+              <button class="insButton" id="increase_${i}" value="${i}" onclick="increase(event)">+</button> 
+            </div>
+            <div class="priceValue" id="price_${i}" onchange="updateCartTotal()">Rs.`+getLocalInArray[i].rate+`</div> 
             <div>
             <button class="removeBtn" id="remove" onclick="removeItem(${i})" value="${i}">Remove</button>
             </div>  
@@ -26,7 +28,8 @@ getItem();
 function increase(event) {
   //1. get quantity
   let targetElement = event.target.value;
-  let inputNumber = document.getElementById("input_"+targetElement).value;
+  let inputNumber = document.getElementById("input_"+targetElement).innerHTML;
+  console.log(inputNumber);
   //2. validation
 
   //3. increase quantity
@@ -34,7 +37,7 @@ function increase(event) {
   let increaseQty = qtyInArray+1;
   if(increaseQty != null) {
   //4. update the qty
-    document.getElementById("input_"+targetElement).value = increaseQty;
+    document.getElementById("input_"+targetElement).innerHTML = increaseQty;
   }
   //5. price of the product
   let artPrice = document.getElementById("rateOfArts_"+targetElement).getAttribute("value");
@@ -50,18 +53,18 @@ updateCartTotal();
 function decrease(event) {
   //1. get quantity
   let targetValue = event.target.value;
-  let inputNumber = document.getElementById("input_"+targetValue).value;
+  let inputNumber = document.getElementById("input_"+targetValue).innerHTML;
   //2. validation
   let inputInArray = parseInt(inputNumber);
   //3. decrease quantity
   let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
   //4. disbled the decrease button.
-  if(inputInArray === 1) {
-    document.getElementById("decrease_"+targetValue).disabled = true;
+  if(decreaseNum === 1) {
+  document.getElementById("decrease_"+targetValue).style.display="none";
   }
   if(decreaseNum != null) {
     //5. update the quantity
-    document.getElementById("input_"+targetValue).value = decreaseNum;
+    document.getElementById("input_"+targetValue).innerHTML = decreaseNum;
   }
   //6. price of the product
   let artPrice = document.getElementById("rateOfArts_"+targetValue).getAttribute("value");
@@ -89,7 +92,7 @@ function updateCartTotal() {
   }
  }
 
- updateCartTotal();
+
 
 function removeItem(index) {
   //1. get value from the local storage

@@ -84,18 +84,37 @@
    margin-left: 25%;
    margin-top: 5%;
 }
-.insButton{
-    background-color: lightgray;
+.qnty{
+    display: flex; 
+    flex-flow: row; 
+    margin-left: 50%;
+
+}
+.inputBox {
     font-size: 2vh;
+    width: 2%;
+    margin-left: 1%;
+    padding-top: 0.5%;
+}
+.insButton{
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 3%;
+    background-color: lightgray;
+    font-size: 3vh;
+    height: 5;
 }
 .insButton:hover{
     background-color: grey;
 }
 
 .button{
+    margin-top: 1%;
+    width: 3%;
+    height: 5;
     background-color: lightgray;
-    font-size: 2vh;
-    margin-left: 50%;
+    font-size: 3vh;
+    
 }
 .button:hover{
     background-color: grey;
@@ -106,8 +125,7 @@
 }
 .priceValue{
     font-size: 3vh;
-    margin-left: 70%;
-    
+    margin-left: 70%;    
 }
 .totalValue{
    font-size: 3vh;
