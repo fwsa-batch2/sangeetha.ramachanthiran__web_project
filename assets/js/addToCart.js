@@ -60,8 +60,9 @@ function decrease(event) {
   let decreaseNum = inputNumber>1 ? inputInArray-1 : 1;
   //4. disbled the decrease button.
   if(decreaseNum === 1) {
-  document.getElementById("decrease_"+targetValue).style.display="none";
+  document.getElementById("decrease_"+targetValue).style.opacity= 2;
   }
+  
   if(decreaseNum != null) {
     //5. update the quantity
     document.getElementById("input_"+targetValue).innerHTML = decreaseNum;
@@ -92,8 +93,6 @@ function updateCartTotal() {
   }
  }
 
-
-
 function removeItem(index) {
   //1. get value from the local storage
   let localName = localStorage.getItem("CARTITEM");
@@ -106,3 +105,13 @@ function removeItem(index) {
   getItem();
  }
 
+ function nextPage() {
+   let localStorageName = localStorage.getItem("CARTITEM");
+   console.log(localStorageName);
+   if(localStorageName != null) {
+    window.location.href="./../pages/address.html"
+   }
+   else {
+     alert("your cart is empty");
+   }
+ }

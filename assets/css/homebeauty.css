@@ -8,7 +8,7 @@ body {
   padding-top: 3vh;
   padding-left: 10px;
   position: absolute;
-  top: 0%;
+  /* top: 0%; */
   right: 5vh;
   left: 3%;
   bottom: 2%;
@@ -118,7 +118,8 @@ a:active {
   width: 40%;
   position: fixed;
   height: 70px;
-  background-color: #5e5d5d;
+  /* background-color: #5e5d5d; */
+  background-color: #2C363F;
   list-style-type: none;
   margin: 0;
   padding-left: 65%;
