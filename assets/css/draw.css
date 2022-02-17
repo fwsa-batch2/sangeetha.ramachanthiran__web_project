@@ -5,8 +5,8 @@ body {
   background-color: lightgray;
   color: white;
 }
-#text_head{
-  margin-top: 5vh;
+#head{
+  padding-top: 10vh;
   margin-left: 1vh;
    font-size: 3vh;
    color: rgb(180, 101, 22);
@@ -44,7 +44,7 @@ body {
     width: 5%;
     position:absolute;
     left: 0%;
-    background-color: rgb(87, 84, 84);
+    background-color: #2C363F;
 }
 #chooseColor{
  
