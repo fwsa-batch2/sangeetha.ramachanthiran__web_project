@@ -7,41 +7,40 @@
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
 </head>
-  <br> 
-    <h1 style="text-align: center;">Login</h1>
-<body bgcolor="EEEEEE">
-  <form id="myForm" onsubmit="submitHandler(event)">
-    <div id="table">
-      
-    <span id="email">
-      <label for="">Email id</label>
-    <input id="emailId" type="email"  pattern="[a-z0-9]+@[a-z]+\.[a-z]{3,}$" title="Email should contain numbers and only lowercase! " placeholder="Enter email id" required><br><br>
-   
-    </span>
-   
-    <span id="userPassword">
-      <label for="">Password</label>
-    <input id="password" type="password" placeholder="Enter password" minlength="8"  required><br><br>
-    </span>
   
+<body bgcolor="EEEEEE">
+  <br> 
+  <h1 style="text-align: center;">Login</h1>
+  <div id="Container">
+    <div>
+      <img id="LoginImg" src="../assets/img/Artist.jpg" alt="LoginPageImage">
     </div>
-    <span id="emailErr"></span>
-
-    <br><br><br>
-    
-       <p style="text-align: center;">
-        Need an account?
-        <a href="../pages/signup.html">
-          Sign Up
-        </a>
-     
-      <br><br><br>
-
-      <input id="button" type="submit" value = "Submit"  style="font-size:25px;">
-      
-      <br><br><br><br><br><br>
-    </p>
-  </form>
+    <div id="loginContainer">
+      <form id="myForm" onsubmit="submitHandler(event)">
+        <div id="table">
+          <span id="email">
+            <label for="">Email id</label>
+            <input id="emailId" type="email"  pattern="[a-z0-9]+@[a-z]+\.[a-z]{3,}$" title="Email should contain numbers and only lowercase! " placeholder="Enter email id" required><br><br>
+          </span>
+          <span id="userPassword">
+            <label for="">Password</label>
+            <input id="password" type="password" placeholder="Enter password" minlength="8"  required><br><br>
+          </span>
+        </div>
+        <span id="emailErr"></span>
+        <br>
+        <p style="text-align: center;">
+          Need an account?
+          <a href="../pages/signup.html">
+            Sign Up
+          </a>
+          <br><br><br>
+          <input id="button" type="submit" value = "Submit"  style="font-size:25px;">
+          <br><br><br><br><br><br>
+        </p>
+      </form>
+    </div>
+  </div>
   <script src="../assets/js/login.js"></script> 
     
 </body>

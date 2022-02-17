@@ -16,38 +16,42 @@
       Sign Up
     </span>
   </h1>
-  <form id="myForm" onsubmit="submitHandler(event)">
-    <div id="table">
-     <span id="name"> 
-       <label for="">Name</label>
-      <input id="userName" type="text" pattern="[A-Za-z]{3,20}$" title="Name should contain only alphabet" placeholder="Enter name" required> <br><br>
-    </span>
-    <span id="email">
-      <label for="">Email id</label>
-    <input id="emailId" type="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,4}$" title="Email should contain numbers and only lowercase! " placeholder="Enter email id" required ><br><br>
-    <span id="emailErr"></span>
-    </span>
-    <span id="userPassword">
-      <label for="">Password</label>
-    <input id="password" type="password" 
-   placeholder="Enter password" minlength="8" required><br><br>
-    </span>
-   <span id="confirmPassword">
-    <label for="">Confirm password</label>
-    <input id="confirm" type="password" value="" placeholder="Confirm password" minlength="8"  required>
-    <br>
-    <span id="errorMsg"></span>
-  </span>
+  <div class="signupContainer">
+    <div>
+      <img id="signupImg" src="../assets/img/paintBrush.jpg" alt="paintBrush" >
     </div>
-
-    <br><br>
-    <p style="text-align: center;">
-
-      <input id="button" type="Submit" value="Submit"  style="font-size: 3vh;">
-      
-      <br><br><br><br><br><br>
-    </p>
-  </form>
+    <div id="container">
+      <form id="myForm" onsubmit="submitHandler(event)">
+        <div id="table">
+          <span id="name"> 
+            <label for="">Name</label>
+            <input id="userName" type="text" pattern="[A-Za-z]{3,20}$" title="Name should contain only alphabet" placeholder="Enter name" required> <br><br>
+          </span>
+          <span id="email">
+            <label for="">Email id</label>
+            <input id="emailId" type="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,4}$" title="Email should contain numbers and only lowercase! " placeholder="Enter email id" required ><br><br>
+            <span id="emailErr"></span>
+          </span>
+          <span id="userPassword">
+            <label for="">Password</label>
+            <input id="password" type="password" 
+              placeholder="Enter password" minlength="8" required><br><br>
+          </span>
+          <span id="confirmPassword">
+            <label for="">Confirm password</label>
+            <input id="confirm" type="password" value="" placeholder="Confirm password" minlength="8"  required>
+            <br>
+            <span id="errorMsg"></span>
+          </span>
+        </div>
+        <br><br>
+        <p style="text-align: center;">
+          <input id="button" type="Submit" value="Submit"  style="font-size: 3vh;">
+          <br><br><br><br><br><br>
+        </p>
+      </form>
+    </div>
+  </div>
   <script src="../assets/js/signup.js"></script>
 </body>
 

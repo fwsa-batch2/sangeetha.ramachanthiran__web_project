@@ -1,0 +1,30 @@
+#painting_content {
+    background-color: #F2F5EA;
+    width: 24%;
+    font-style: normal;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 20%;
+    margin-top: 10%;
+    padding: 2%;
+    margin-bottom: 15%;
+    border: rgb(214, 212, 212);
+    border-style: groove;
+    box-shadow: -10px 10px 10px rgb(153, 150, 150);
+}
+#imageDrawing {
+    width: 55%;
+    height: 570px;
+    margin-top: 19%;
+    background-color: #F2F5EA;
+    border: rgb(214, 212, 212);
+    border-style: groove;
+    box-shadow: 10px 10px 10px rgb(153, 150, 150);
+}
+.bgColor {
+    background-image:url(../img/bgImage.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}

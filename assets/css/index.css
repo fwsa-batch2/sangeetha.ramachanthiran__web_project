@@ -36,7 +36,13 @@
     margin-left: 10%;
     margin-right: -22%;
 }
-
+.imgContent {
+    display: flex;
+    flex-flow: column;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: -22%; 
+}
 .adsImg {
    position: relative;
    margin-right: 70%;
@@ -54,9 +60,24 @@
     font-size: 20px;
     font-weight: 700;
 }
+.img {
+    position: relative;
+    margin-top: 10%;
+    /* margin-left: 70%; */
+    border-color: rgb(236, 229, 229);
+   border-style: groove;
+}
+
 #quote {
-    font-size: 30px;
+    background-color: #E75A7C;
+    font-size: 35px;
     margin-top: 15%;
+    padding-left: 5%;
+    font-family: fantasy;
+    margin-right: 25%;
+}
+#quote_Name {
+    margin-left: 70%;
 }
 .slideshow-container {
   max-width: 1000px;

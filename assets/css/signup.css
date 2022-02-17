@@ -1,5 +1,5 @@
 body{
-  background-color: lightcyan;
+  background-color: #F2F5EA;
 }
 
 #table 
@@ -7,31 +7,43 @@ body{
   font-size: 3vh;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 10%;
-  width: 100vh;
-  height: 30vh;
+  width: 75vh;
+  height: 40vh;
+}
+.signupContainer {
+  display: flex;
+  flex-flow: row;
+}
+#signupImg {
+  width: 55%;
+  height: 570px;
+  margin-left: 45%;
+  margin-right: 15%;
+  margin-top: 4%;
 }
 #myForm{
-  background-color: burlywood;
+  background-color: #fcd0bb;
   margin-top: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-radius: 10vh;
+  /* border-radius: 10vh; */
  
 }
+#container {
+  margin-right: 15%;
+}
 #name{
-  margin-left: 15vh;
+  margin-left: 10vh;
   
 }
 #email{
-  margin-left: 15vh;
+  margin-left: 10vh;
   margin-top: 20vh;
 }
 #confirmPassword{
-  margin-left: 15vh;
+  margin-left: 10vh;
   margin-top: 20vh;
 }
 #userPassword{
-  margin-left: 15vh;
+  margin-left: 10vh;
   margin-top: 20vh;
 }
 #userName{
