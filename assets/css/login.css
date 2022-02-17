@@ -5,8 +5,6 @@
   padding-top: 35%;
   width: 75vh;
   height: 250px;
-  /* width: 75vh;
-  height: 38vh; */
 }
 #Container {
   display: flex;
@@ -20,18 +18,15 @@
   margin-top: 4%;
 }
 #loginContainer{
-  margin-right: 15%;
-  
+  margin-right: 15%;  
 }
 #myForm{
   background-color: #F2F5EA;
-  margin-top: 5%;
-  
+  margin-top: 5%;  
 }
 
 #email{
   margin-left: 15vh;
- 
 }
 
 #userPassword{
@@ -54,8 +49,7 @@
 #emailErr{
   color: red;
   font-size: 3vh;
-  margin-left: 50%;
-  
+  margin-left: 50%; 
 }
 #button:hover {
   background-color: slategray;
